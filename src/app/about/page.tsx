@@ -55,7 +55,7 @@ export default function AboutPage() {
             className="object-cover opacity-15"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark via-espresso/80 to-espresso/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/60 to-transparent" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 rounded-full px-4 py-1.5 mb-4">

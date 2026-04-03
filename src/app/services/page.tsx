@@ -156,8 +156,8 @@ export default function ServicesPage() {
                   rel="noopener noreferrer"
                   className={`mt-6 w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                     pkg.popular
-                      ? 'bg-brand text-ink hover:bg-brand/90'
-                      : 'bg-ink/8 text-ink hover:bg-ink/10'
+                      ? 'bg-green text-white hover:bg-green/90'
+                      : 'bg-ink/10 text-ink hover:bg-ink/15'
                   }`}
                 >
                   Dapatkan Penawaran

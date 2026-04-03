@@ -30,7 +30,7 @@ export default function MenuGrid({ preview = false }: MenuGridProps) {
               className={`relative px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeCategory === cat.id
                   ? 'text-ink bg-yellow shadow-lg shadow-yellow/30'
-                  : 'text-ink/70 bg-ink/8 hover:bg-ink/10 hover:text-ink'
+                  : 'text-ink/70 bg-ink/10 hover:bg-ink/15 hover:text-ink'
               }`}
             >
               {cat.label}
@@ -74,7 +74,7 @@ export default function MenuGrid({ preview = false }: MenuGridProps) {
                   : item.type === 'Japanese' ? 'bg-red-500/90 text-white'
                   : item.type === 'Chinese' ? 'bg-orange-500/90 text-white'
                   : item.type === 'Korean' ? 'bg-pink-500/90 text-white'
-                  : item.type === 'Indian' ? 'bg-brand-600/90 text-white'
+                  : item.type === 'Indian' ? 'bg-teal/90 text-white'
                   : 'bg-teal/90 text-white'
                 }`}>
                   {item.type}
