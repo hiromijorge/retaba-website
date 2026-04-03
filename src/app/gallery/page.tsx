@@ -134,15 +134,15 @@ export default function GalleryPage() {
       <section className="py-16 bg-surface/80 border-t border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-ink/50 text-sm mb-6">
-            * Foto-foto di atas merupakan contoh representasi. Untuk foto asli hidangan RETABA, silakan hubungi kami.
+            Ingin melihat dokumentasi sajian dan kegiatan RETABA secara langsung? Hubungi tim kami.
           </p>
           <a
             href="https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20melihat%20foto-foto%20hidangan%20asli%20Anda."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-yellow hover:bg-yellow/90 text-ink px-6 py-3 rounded-full font-bold text-sm transition-all hover:shadow-lg hover:shadow-yellow/30"
+            className="inline-flex items-center gap-2 bg-green hover:bg-green/90 text-white px-6 py-3 rounded-full font-bold text-sm transition-all hover:shadow-lg hover:shadow-green/30"
           >
-            Lihat Foto Asli via WhatsApp
+            Lihat Dokumentasi via WhatsApp
           </a>
         </div>
       </section>

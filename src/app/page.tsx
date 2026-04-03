@@ -6,7 +6,6 @@ import WhyUsSection from '@/components/WhyUsSection';
 import MenuGrid from '@/components/MenuGrid';
 import ClientLogos from '@/components/ClientLogos';
 import TestimonialSlider from '@/components/TestimonialSlider';
-import SectionHeader from '@/components/SectionHeader';
 
 const siteUrl = 'https://retaba.co.id';
 const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
@@ -67,12 +66,20 @@ export default function HomePage() {
       {/* Certifications — moved up: first thing B2B procurement checks */}
       <section className="py-16 lg:py-20 bg-surface/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            badge="Sertifikasi Resmi"
-            title="Terjamin &"
-            highlight="Dapat Diverifikasi"
-            description="Tiga sertifikasi resmi yang dapat diverifikasi secara independen — bukan sekadar klaim."
-          />
+          {/* Stat-led header — big number anchors the section */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-14">
+            <div>
+              <span className="text-[72px] sm:text-[88px] font-black text-green leading-none">3</span>
+              <p className="text-ink font-black text-2xl sm:text-3xl mt-1">Sertifikasi Resmi</p>
+              <p className="text-ink/50 text-sm mt-2 max-w-sm">
+                Dapat diverifikasi secara independen — bukan sekadar klaim di brosur.
+              </p>
+            </div>
+            <div className="flex items-center gap-3 bg-white border border-border rounded-2xl px-5 py-3 self-start lg:self-auto">
+              <div className="w-2 h-2 rounded-full bg-green" />
+              <span className="text-ink/60 text-sm font-medium">Halal MUI · SLHS · Lab Tested</span>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
@@ -124,12 +131,16 @@ export default function HomePage() {
       {/* Menu Preview — single entry point */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            badge="100+ Pilihan Menu"
-            title="Dari 6 Kuliner"
-            highlight="Dunia"
-            description="Nusantara, Jepang, Korea, India, China, dan menu kustom sesuai selera karyawan Anda."
-          />
+          {/* Left-aligned editorial header — breaks center pattern */}
+          <div className="mb-12 lg:mb-16">
+            <p className="text-green font-bold text-sm uppercase tracking-widest mb-3">100+ Pilihan</p>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-ink leading-tight">
+              Menu dari 6<br />kuliner dunia.
+            </h2>
+            <p className="text-ink/50 mt-4 text-lg max-w-lg">
+              Nusantara, Jepang, Korea, India, China, dan menu kustom — jadwal berganti tiap minggu.
+            </p>
+          </div>
           <MenuGrid preview />
           <div className="text-center mt-12">
             <Link href="/menu" className="inline-flex items-center gap-2 bg-brand hover:bg-brand/90 text-ink px-8 py-4 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-brand/30">

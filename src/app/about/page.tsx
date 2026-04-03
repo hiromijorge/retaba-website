@@ -22,9 +22,9 @@ const values = [
     icon: '☪',
   },
   {
-    title: 'Inovasi Berkelanjutan',
-    description: 'Program pembelian produk klien yang unik menciptakan ekosistem bisnis yang saling menguntungkan.',
-    icon: '💡',
+    title: 'Fleksibel & Responsif',
+    description: 'Menu dan paket disesuaikan dengan kebutuhan dan anggaran perusahaan Anda. Tim kami mudah dihubungi dan cepat merespons perubahan mendadak.',
+    icon: '⚡',
   },
   {
     title: 'Kemitraan Jangka Panjang',
@@ -39,7 +39,7 @@ const milestones = [
   { year: '2023', title: 'Klien Pertama', desc: 'Mulai melayani perusahaan-perusahaan besar di wilayah Jawa Tengah.' },
   { year: '2024', title: 'Ekspansi Program', desc: 'Program pembelian produk klien berhasil diimplementasikan dan mendapat respons positif.' },
   { year: '2024', title: 'Ekspansi Tangerang', desc: 'Membuka layanan di Tangerang untuk melayani lebih banyak perusahaan.' },
-  { year: '2025', title: 'Pertumbuhan Pesat', desc: 'Melayani 6+ perusahaan besar termasuk Indofood dan Wipro Unza Vitalis.' },
+  { year: '2025', title: 'Pertumbuhan Pesat', desc: 'Melayani 20+ perusahaan aktif termasuk Indofood, Wipro Unza Vitalis, Konimex, dan lainnya.' },
 ];
 
 export default function AboutPage() {
@@ -89,13 +89,14 @@ export default function AboutPage() {
                   kepercayaan, kami berhasil mendapatkan sertifikasi Halal MUI dan SLHS di tahun yang sama.
                 </p>
                 <p>
-                  Kini RETABA telah melayani lebih dari 6 perusahaan besar termasuk PT Indofood Sukses Makmur,
-                  PT Wipro Unza Vitalis Indonesia, PT Konimex, dan beberapa klien bergengsi lainnya. Kami
+                  Kini RETABA telah melayani lebih dari 20 perusahaan aktif termasuk PT Indofood Sukses Makmur,
+                  PT Wipro Unza Vitalis Indonesia, PT Konimex, dan perusahaan-perusahaan lainnya. Kami
                   beroperasi di tiga kota: Tangerang, Salatiga, dan Solo.
                 </p>
                 <p>
-                  Yang membedakan kami adalah program inovatif pembelian produk klien, yang menciptakan ekosistem
-                  bisnis win-win antara RETABA, klien perusahaan, dan karyawan mereka.
+                  Yang membedakan kami adalah komitmen pada kualitas yang dapat diverifikasi — bukan sekadar
+                  klaim. Halal MUI bersertifikat resmi, SLHS dari pemerintah, dan uji laboratorium pangan
+                  independen menjadi standar operasional kami setiap hari.
                 </p>
               </div>
             </div>
@@ -110,9 +111,9 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 to-transparent" />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-brand text-ink p-6 rounded-2xl shadow-2xl">
-                <div className="text-3xl font-black">Est.</div>
-                <div className="text-5xl font-black leading-none">2023</div>
+              <div className="absolute -bottom-6 -left-6 bg-green text-white p-5 rounded-2xl shadow-2xl">
+                <div className="text-xs font-bold opacity-70 mb-1 uppercase tracking-widest">Halal MUI</div>
+                <div className="text-2xl font-black leading-none">☪ Tersertifikasi</div>
               </div>
             </div>
           </div>
@@ -185,9 +186,9 @@ export default function AboutPage() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-brand hover:bg-brand/90 text-ink px-8 py-3 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-brand/30"
+            className="inline-flex items-center gap-2 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-green/30"
           >
-            Hubungi Kami Sekarang
+            Minta Penawaran via WhatsApp
           </a>
         </div>
       </section>

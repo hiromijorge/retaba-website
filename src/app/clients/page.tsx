@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
 
 const stats = [
-  { value: '6+', label: 'Perusahaan Klien' },
+  { value: '20+', label: 'Perusahaan Klien' },
   { value: '3', label: 'Kota Layanan' },
-  { value: '500+', label: 'Porsi Per Hari' },
-  { value: '100%', label: 'Kepuasan Klien' },
+  { value: '5.000+', label: 'Porsi Per Hari' },
+  { value: '100+', label: 'Variasi Menu' },
 ];
 
 export default function ClientsPage() {
@@ -31,7 +31,7 @@ export default function ClientsPage() {
             <span className="text-green">Perusahaan Terkemuka</span>
           </h1>
           <p className="text-ink/60 text-xl max-w-2xl mx-auto">
-            Lebih dari 6 perusahaan besar telah mempercayakan kebutuhan catering mereka kepada RETABA.
+            20+ perusahaan aktif mempercayakan kebutuhan catering harian mereka kepada RETABA — mulai dari pabrik hingga hotel bintang.
           </p>
         </div>
       </section>
@@ -131,9 +131,9 @@ export default function ClientsPage() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-brand hover:bg-brand/90 text-ink px-8 py-4 rounded-2xl font-bold text-base transition-all hover:shadow-2xl hover:shadow-brand/30 hover:-translate-y-1"
+            className="inline-flex items-center gap-2 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-2xl font-bold text-base transition-all hover:shadow-2xl hover:shadow-green/30 hover:-translate-y-1"
           >
-            Diskusikan Kebutuhan Anda
+            Minta Penawaran via WhatsApp
           </a>
         </div>
       </section>

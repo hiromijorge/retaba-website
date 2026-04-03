@@ -3,7 +3,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { clients } from '@/data/clients';
-import SectionHeader from './SectionHeader';
 
 // Company Logo Component - Styled text-based logo
 const CompanyLogo = ({ client, index }: { client: typeof clients[0]; index: number }) => {
@@ -60,12 +59,21 @@ export default function ClientLogos() {
   return (
     <section ref={ref} className="py-20 bg-white border-y border-border/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          badge="Klien Kami"
-          title="Dipercaya"
-          highlight="Perusahaan"
-          size="lg"
-        />
+        {/* Minimal header — no badge/highlight pattern */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14"
+        >
+          <div>
+            <p className="text-ink/40 text-xs uppercase tracking-widest font-bold mb-2">Klien Aktif</p>
+            <h2 className="text-3xl sm:text-4xl font-black text-ink leading-tight">
+              20+ Perusahaan<br className="hidden sm:block" /> Mempercayai Kami
+            </h2>
+          </div>
+          <div className="w-16 h-1 bg-brand rounded-full sm:mb-2 shrink-0" />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}

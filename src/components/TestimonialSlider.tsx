@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { testimonials } from '@/data/clients';
-import SectionHeader from './SectionHeader';
 
 export default function TestimonialSlider() {
   const [current, setCurrent] = useState(0);
@@ -29,18 +28,19 @@ export default function TestimonialSlider() {
   return (
     <section className="py-24 lg:py-32 bg-surface/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          badge="Testimoni"
-          title="Apa Kata"
-          highlight="Mereka"
-        />
-
-        <div className="relative max-w-3xl mx-auto">
-          {/* Quote mark */}
-          <div className="absolute -top-8 left-0 text-brand/30 text-[150px] font-serif leading-none select-none" aria-hidden>
+        {/* Pull-quote style header — breaks the badge/title/highlight pattern */}
+        <div className="text-center mb-12">
+          <div
+            className="text-[120px] font-serif leading-none select-none mb-[-1.5rem]"
+            style={{ color: '#F7D200', opacity: 0.5 }}
+            aria-hidden
+          >
             &ldquo;
           </div>
+          <p className="text-ink/40 text-xs uppercase tracking-widest font-bold">Kata klien kami</p>
+        </div>
 
+        <div className="relative max-w-3xl mx-auto">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={current}
