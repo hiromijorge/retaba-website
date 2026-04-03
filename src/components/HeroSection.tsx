@@ -90,36 +90,6 @@ export default function HeroSection() {
                 Lihat Menu →
               </Link>
             </motion.div>
-
-            {/* Client social proof strip — actual logos */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="pt-6 border-t border-ink/10"
-            >
-              <p className="text-ink/40 text-xs uppercase tracking-widest font-bold mb-4">Dipercaya oleh</p>
-              <div className="flex flex-wrap items-center gap-3">
-                {clients.map((client) =>
-                  client.logo ? (
-                    <div
-                      key={client.id}
-                      className="bg-white/80 backdrop-blur-sm rounded-lg px-3 py-2 relative h-9 w-24 shrink-0 shadow-sm"
-                      title={client.name}
-                    >
-                      <Image
-                        src={client.logo}
-                        alt={client.shortName}
-                        fill
-                        className="object-contain p-1"
-                        sizes="96px"
-                      />
-                    </div>
-                  ) : null
-                )}
-                <span className="text-ink/40 text-xs font-semibold">& 15 lainnya</span>
-              </div>
-            </motion.div>
           </div>
 
           {/* Right: food photo — large, overlapping the diagonal cut */}
