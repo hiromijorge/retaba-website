@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { clients } from '@/data/clients';
 
 const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
 
@@ -90,18 +91,33 @@ export default function HeroSection() {
               </Link>
             </motion.div>
 
-            {/* Client social proof strip */}
+            {/* Client social proof strip — actual logos */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="pt-6 border-t border-ink/10"
             >
-              <p className="text-ink/40 text-xs uppercase tracking-widest font-bold mb-3">Dipercaya oleh</p>
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-                {['Indofood', 'Wipro Unza', 'Konimex', 'Front One Hotel', '& 17 perusahaan lainnya'].map((name) => (
-                  <span key={name} className="text-ink/60 text-sm font-semibold">{name}</span>
-                ))}
+              <p className="text-ink/40 text-xs uppercase tracking-widest font-bold mb-4">Dipercaya oleh</p>
+              <div className="flex flex-wrap items-center gap-3">
+                {clients.map((client) =>
+                  client.logo ? (
+                    <div
+                      key={client.id}
+                      className="bg-white/80 backdrop-blur-sm rounded-lg px-3 py-2 relative h-9 w-24 shrink-0 shadow-sm"
+                      title={client.name}
+                    >
+                      <Image
+                        src={client.logo}
+                        alt={client.shortName}
+                        fill
+                        className="object-contain p-1"
+                        sizes="96px"
+                      />
+                    </div>
+                  ) : null
+                )}
+                <span className="text-ink/40 text-xs font-semibold">& 15 lainnya</span>
               </div>
             </motion.div>
           </div>

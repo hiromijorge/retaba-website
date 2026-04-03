@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { clients, testimonials } from '@/data/clients';
 
 export const metadata: Metadata = {
@@ -60,8 +61,18 @@ export default function ClientsPage() {
             {clients.map((client) => (
               <article key={client.id} className="group p-8 rounded-2xl bg-ink/5 border border-border hover:border-brand/30 hover:bg-brand/5 transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-brand/20 to-green/20 flex items-center justify-center shrink-0 group-hover:from-brand/30 group-hover:to-green/30 transition-colors">
-                    <span className="text-green font-black text-xl">{client.shortName.charAt(0)}</span>
+                  <div className="w-20 h-12 rounded-lg bg-white border border-border flex items-center justify-center shrink-0 relative overflow-hidden p-1.5">
+                    {client.logo ? (
+                      <Image
+                        src={client.logo}
+                        alt={`Logo ${client.shortName}`}
+                        fill
+                        className="object-contain p-1.5"
+                        sizes="80px"
+                      />
+                    ) : (
+                      <span className="text-green font-black text-xl">{client.shortName.charAt(0)}</span>
+                    )}
                   </div>
                   <div>
                     <h3 className="text-ink font-bold leading-tight">{client.name}</h3>

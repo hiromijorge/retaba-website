@@ -13,42 +13,48 @@ export const clients: Client[] = [
     name: 'PT Wipro Unza Vitalis Indonesia',
     shortName: 'Wipro Unza',
     industry: 'FMCG / Personal Care',
-    color: '#E53030', // Red
+    logo: '/customer-logo/wipro-unza.png',
+    color: '#E53030',
   },
   {
     id: 2,
     name: 'PT Indofood Sukses Makmur',
     shortName: 'Indofood',
     industry: 'Food & Beverage',
-    color: '#E53030', // Red
+    logo: '/customer-logo/indofood.png',
+    color: '#E53030',
   },
   {
     id: 3,
     name: 'PT Konimex',
     shortName: 'Konimex',
     industry: 'Pharmaceutical',
-    color: '#087A68', // Green
+    logo: '/customer-logo/konimex.png',
+    color: '#087A68',
   },
   {
     id: 4,
     name: 'PT Graphic Packaging International',
     shortName: 'Graphic Packaging',
     industry: 'Packaging',
-    color: '#00B4A0', // Teal
+    logo: '/customer-logo/graphic-packaging.jpg',
+    color: '#00B4A0',
   },
   {
     id: 5,
     name: 'PT Kayu Arum Resort',
     shortName: 'Kayu Arum Resort',
     industry: 'Hospitality',
-    color: '#8B4513', // Brown
+    logo: '/customer-logo/kayu-arum.jpeg',
+    color: '#8B4513',
   },
   {
     id: 6,
     name: 'Front One Hotel',
     shortName: 'Front One Hotel',
     industry: 'Hospitality',
-    color: '#F7D200', // Yellow
+    logo: '/customer-logo/frontone-hotel.png',
+    color: '#F7D200',
   },
 ];
 
