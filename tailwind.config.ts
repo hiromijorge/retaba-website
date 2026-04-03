@@ -27,6 +27,7 @@ const config: Config = {
         mocha:      '#6B7280',
         amber:      '#F7D200',
         forest:     '#087A68',
+        yellow:     '#F7D200',
       },
       fontFamily: {
         sans:    ['var(--font-nunito)', 'system-ui', 'sans-serif'],

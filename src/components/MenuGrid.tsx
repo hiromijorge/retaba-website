@@ -30,7 +30,7 @@ export default function MenuGrid({ preview = false }: MenuGridProps) {
               className={`relative px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeCategory === cat.id
                   ? 'text-ink bg-yellow shadow-lg shadow-yellow/30'
-                  : 'text-ink/60 bg-ink/8 hover:bg-ink/10 hover:text-white'
+                  : 'text-ink/70 bg-ink/8 hover:bg-ink/10 hover:text-ink'
               }`}
             >
               {cat.label}
@@ -83,7 +83,7 @@ export default function MenuGrid({ preview = false }: MenuGridProps) {
               <div className="p-4">
                 <h3 className="text-ink font-semibold text-sm">{item.name}</h3>
                 {item.description && (
-                  <p className="text-ink/40 text-xs mt-1 leading-tight">{item.description}</p>
+                  <p className="text-ink/60 text-xs mt-1 leading-tight">{item.description}</p>
                 )}
               </div>
             </motion.div>

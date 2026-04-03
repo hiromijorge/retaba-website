@@ -4,6 +4,7 @@ export interface Client {
   shortName: string;
   industry: string;
   logo?: string;
+  color: string;
 }
 
 export const clients: Client[] = [
@@ -12,36 +13,42 @@ export const clients: Client[] = [
     name: 'PT Wipro Unza Vitalis Indonesia',
     shortName: 'Wipro Unza',
     industry: 'FMCG / Personal Care',
+    color: '#E53030', // Red
   },
   {
     id: 2,
     name: 'PT Indofood Sukses Makmur',
     shortName: 'Indofood',
     industry: 'Food & Beverage',
+    color: '#E53030', // Red
   },
   {
     id: 3,
     name: 'PT Konimex',
     shortName: 'Konimex',
     industry: 'Pharmaceutical',
+    color: '#087A68', // Green
   },
   {
     id: 4,
     name: 'PT Graphic Packaging International',
     shortName: 'Graphic Packaging',
     industry: 'Packaging',
+    color: '#00B4A0', // Teal
   },
   {
     id: 5,
-    name: 'PT Putra Kemas Makmur',
-    shortName: 'Putra Kemas',
-    industry: 'Packaging',
+    name: 'PT Kayu Arum Resort',
+    shortName: 'Kayu Arum Resort',
+    industry: 'Hospitality',
+    color: '#8B4513', // Brown
   },
   {
     id: 6,
     name: 'Front One Hotel',
     shortName: 'Front One Hotel',
     industry: 'Hospitality',
+    color: '#F7D200', // Yellow
   },
 ];
 
@@ -88,7 +95,7 @@ export const testimonials = [
     role: 'Plant Manager',
     company: 'PT Wipro Unza Vitalis Indonesia',
     rating: 5,
-    text: 'Sertifikasi Halal dan hasil uji lab dari RETABA memberikan kepercayaan penuh bagi kami. Lebih dari 500 karyawan kami makan setiap hari dari RETABA, dan semua senang!',
+    text: 'Sertifikasi Halal dan hasil uji lab dari RETABA memberikan kepercayaan penuh bagi kami. Lebih dari 5000 karyawan kami makan setiap hari dari RETABA, dan semua senang!',
     avatar: 'RP',
   },
 ];

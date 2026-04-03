@@ -2,40 +2,41 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import SectionHeader from './SectionHeader';
 
 const reasons = [
   {
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
       </svg>
     ),
-    title: 'Menu Bervariasi',
-    description: 'Lebih dari 100 variasi menu Nusantara, Jepang, Chinese, Korea, dan India. Jadwal mingguan yang selalu berganti agar karyawan tidak bosan.',
-    highlight: '100+ Menu',
+    title: '100+ Variasi Menu',
+    description: 'Nusantara, Jepang, Korea, India, China, dan menu kustom. Jadwal berganti setiap minggu — karyawan tidak bosan, produktivitas terjaga.',
+    stat: '6 Kuliner Dunia',
     color: 'yellow',
   },
   {
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: 'Fleksibel & Praktis',
-    description: 'Layanan harian untuk perusahaan/pabrik maupun event korporat. Sistem pemesanan mudah dengan respon cepat via WhatsApp.',
-    highlight: 'Mudah & Cepat',
+    title: 'Pengiriman On-Time',
+    description: 'Sistem logistik terintegrasi ke Tangerang, Salatiga & Solo. Pengiriman harian tepat waktu — bukan janji, tapi komitmen operasional kami setiap hari.',
+    stat: 'Tangerang · Salatiga · Solo',
     color: 'teal',
   },
   {
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: 'Bahan Berkualitas',
-    description: 'Bahan segar pilihan, diproses dengan standar higiene tinggi, bersertifikat Halal MUI, dan telah melalui uji laboratorium keamanan pangan.',
-    highlight: 'Halal & Teruji',
-    color: 'white',
+    title: 'Tersertifikasi Resmi',
+    description: 'Halal MUI No. ID33110014801751123 — dapat diverifikasi. SLHS resmi dari pemerintah. Diuji laboratorium pangan independen. Bukan sekadar klaim.',
+    stat: 'Halal MUI · SLHS · Lab Tested',
+    color: 'green',
   },
 ];
 
@@ -44,69 +45,57 @@ export default function WhyUsSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="py-24 bg-white">
+    <section ref={ref} className="py-24 lg:py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center gap-2 bg-teal/10 border border-teal/20 rounded-full px-4 py-1.5 mb-4">
-            <span className="text-teal text-sm font-medium">Mengapa Memilih RETABA?</span>
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-black text-ink mb-5">
-            Solusi Catering{' '}
-            <span className="text-yellow">Terbaik</span>
-            <br />untuk Perusahaan Anda
-          </h2>
-          <p className="text-ink/50 text-lg max-w-2xl mx-auto">
-            Kami memahami kebutuhan nutrisi karyawan adalah investasi produktivitas perusahaan Anda.
-          </p>
-        </motion.div>
+        <SectionHeader
+          badge="Mengapa RETABA"
+          title="Tiga Alasan"
+          highlight="Konkret"
+          description="Bukan klaim generik — ini yang membedakan RETABA dari catering lain."
+        />
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reasons.map((reason, i) => (
             <motion.div
               key={reason.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15 * i }}
-              className={`group relative p-8 rounded-3xl border transition-all duration-300 cursor-default
+              className={`group relative p-8 rounded-3xl border-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl
                 ${reason.color === 'yellow'
-                  ? 'bg-yellow/5 border-yellow/20 hover:border-yellow/40 hover:bg-yellow/10'
+                  ? 'bg-brand/5 border-brand/20 hover:border-brand/40'
                   : reason.color === 'teal'
-                  ? 'bg-teal/5 border-teal/20 hover:border-teal/40 hover:bg-teal/10'
-                  : 'bg-ink/5 border-border hover:border-border hover:bg-ink/8'
-                }
+                  ? 'bg-teal/5 border-teal/20 hover:border-teal/40'
+                  : 'bg-green/5 border-green/20 hover:border-green/40'}
               `}
             >
-              <div className={`inline-flex p-3 rounded-2xl mb-6
-                ${reason.color === 'yellow' ? 'bg-yellow/20 text-yellow'
-                  : reason.color === 'teal' ? 'bg-teal/20 text-teal'
-                  : 'bg-ink/8 text-white'}
+              {/* Icon */}
+              <div className={`inline-flex p-4 rounded-2xl mb-6 transition-colors duration-300
+                ${reason.color === 'yellow' ? 'bg-brand/20 text-ink group-hover:bg-brand group-hover:text-ink'
+                  : reason.color === 'teal' ? 'bg-teal/20 text-teal group-hover:bg-teal group-hover:text-white'
+                  : 'bg-green/20 text-green group-hover:bg-green group-hover:text-white'}
               `}>
                 {reason.icon}
               </div>
 
-              <div className={`text-xs font-bold tracking-widest uppercase mb-3
-                ${reason.color === 'yellow' ? 'text-yellow/60'
-                  : reason.color === 'teal' ? 'text-teal/60'
-                  : 'text-ink/40'}
+              {/* Stat badge */}
+              <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4
+                ${reason.color === 'yellow' ? 'bg-brand/20 text-ink'
+                  : reason.color === 'teal' ? 'bg-teal/20 text-teal'
+                  : 'bg-green/20 text-green'}
               `}>
-                {reason.highlight}
+                {reason.stat}
               </div>
 
-              <h3 className="text-ink text-xl font-bold mb-3">{reason.title}</h3>
-              <p className="text-ink/50 leading-relaxed text-sm">{reason.description}</p>
+              <h3 className="text-ink text-2xl font-bold mb-3">{reason.title}</h3>
+              <p className="text-ink/60 leading-relaxed">{reason.description}</p>
 
-              {/* Decorative corner */}
-              <div className={`absolute top-6 right-6 w-16 h-16 rounded-full opacity-10 blur-xl
-                ${reason.color === 'yellow' ? 'bg-yellow'
+              {/* Hover indicator */}
+              <div className={`absolute bottom-0 left-0 right-0 h-1.5 rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left
+                ${reason.color === 'yellow' ? 'bg-brand'
                   : reason.color === 'teal' ? 'bg-teal'
-                  : 'bg-white'}
+                  : 'bg-green'}
               `} />
             </motion.div>
           ))}
