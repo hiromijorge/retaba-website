@@ -3,6 +3,7 @@ import MenuGrid from '@/components/MenuGrid';
 import { menuItems } from '@/data/menu';
 
 const siteUrl = 'https://retaba.co.id';
+const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
 
 const menuJsonLd = {
   '@context': 'https://schema.org',
