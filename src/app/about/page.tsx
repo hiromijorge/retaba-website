@@ -46,7 +46,7 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-end pb-16 overflow-hidden bg-white pt-20">
+      <section className="relative min-h-[45vh] flex items-end pb-12 overflow-hidden bg-white pt-20">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=800&fit=crop"
@@ -71,7 +71,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -121,9 +121,9 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-surface/80 border-y border-border">
+      <section className="py-16 bg-surface/80 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-ink mb-4">
               Nilai <span className="text-green">Kami</span>
             </h2>
@@ -144,9 +144,9 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-ink mb-4">
               Perjalanan <span className="text-green">RETABA</span>
             </h2>
@@ -174,7 +174,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-brand/5 border-t border-brand/20">
+      <section className="py-16 bg-brand/5 border-t border-brand/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-ink mb-4">
             Mari Berkolaborasi Bersama RETABA

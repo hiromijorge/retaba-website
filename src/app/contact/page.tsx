@@ -78,7 +78,7 @@ export default function ContactPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-white">
+      <section className="pt-28 pb-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 rounded-full px-4 py-1.5 mb-4">
             <span className="text-green text-sm font-medium">Hubungi Kami</span>
@@ -93,7 +93,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-16 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactMethods.map((method) => (
@@ -136,7 +136,7 @@ export default function ContactPage() {
       </section>
 
       {/* Area Coverage */}
-      <section className="py-20 bg-surface/80 border-y border-border">
+      <section className="py-16 bg-surface/80 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-ink mb-4">
@@ -162,9 +162,9 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-ink mb-4">
               Pertanyaan yang <span className="text-green">Sering Ditanya</span>
             </h2>
@@ -186,7 +186,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-brand/5 border-t border-brand/20">
+      <section className="py-16 bg-brand/5 border-t border-brand/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-ink mb-4">
             Masih Ada Pertanyaan?

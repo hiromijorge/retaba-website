@@ -54,7 +54,7 @@ export default function MenuPage() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-white">
+      <section className="pt-28 pb-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 rounded-full px-4 py-1.5 mb-4">
             <span className="text-green text-sm font-medium">100+ Pilihan Menu</span>
@@ -95,7 +95,7 @@ export default function MenuPage() {
       </section>
 
       {/* Daily package info */}
-      <section className="py-20 bg-surface/80 border-t border-border">
+      <section className="py-16 bg-surface/80 border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-black text-ink mb-4">
@@ -121,7 +121,7 @@ export default function MenuPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-white border-t border-border">
+      <section className="py-16 bg-white border-t border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-ink mb-4">
             Tertarik? Minta Jadwal Menu & Penawaran Harga

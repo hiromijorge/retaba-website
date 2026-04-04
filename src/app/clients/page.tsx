@@ -22,7 +22,7 @@ export default function ClientsPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-white">
+      <section className="pt-28 pb-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-green/10 border border-green/20 rounded-full px-4 py-1.5 mb-4">
             <span className="text-green text-sm font-medium">Klien Terpercaya</span>
@@ -52,9 +52,9 @@ export default function ClientsPage() {
       </section>
 
       {/* Clients Grid */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-ink mb-12 text-center">
+          <h2 className="text-3xl font-black text-ink mb-10 text-center">
             Klien <span className="text-green">Kami</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -94,9 +94,9 @@ export default function ClientsPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-surface/80 border-y border-border">
+      <section className="py-16 bg-surface/80 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-ink mb-4">
               Kata Mereka tentang <span className="text-green">RETABA</span>
             </h2>
@@ -130,7 +130,7 @@ export default function ClientsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-ink mb-4">
             Jadilah Bagian dari Keluarga RETABA

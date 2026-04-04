@@ -88,7 +88,7 @@ export default function GalleryPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-white">
+      <section className="pt-28 pb-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-yellow/10 border border-yellow/20 rounded-full px-4 py-1.5 mb-4">
             <span className="text-yellow text-sm font-medium">Galeri Foto</span>
@@ -103,7 +103,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-12 bg-white pb-24">
+      <section className="py-12 bg-white pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[200px]">
             {galleryImages.map((img, i) => (
@@ -131,7 +131,7 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-surface/80 border-t border-border">
+      <section className="py-16 bg-surface/80 border-t border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-ink mb-4">
             Tertarik Menjadikan RETABA Mitra Catering Anda?

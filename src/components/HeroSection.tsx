@@ -147,9 +147,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="relative z-10 my-16"
+          className="relative z-10 my-12"
         >
-          <div className="bg-white rounded-2xl shadow-lg border border-border px-8 py-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
+          <div className="bg-white rounded-2xl shadow-lg border border-border px-8 py-6 grid grid-cols-2 sm:grid-cols-4 gap-6">
             {[
               { value: '20+', label: 'Perusahaan Klien' },
               { value: '5000+', label: 'Porsi per Hari' },

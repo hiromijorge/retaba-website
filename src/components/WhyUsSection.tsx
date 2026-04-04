@@ -45,7 +45,7 @@ export default function WhyUsSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-16 lg:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Mengapa RETABA"
@@ -62,7 +62,7 @@ export default function WhyUsSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15 * i }}
-              className={`group relative p-8 rounded-3xl border-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl
+              className={`group relative p-7 rounded-3xl border-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl
                 ${reason.color === 'yellow'
                   ? 'bg-brand/5 border-brand/20 hover:border-brand/40'
                   : reason.color === 'teal'
@@ -71,7 +71,7 @@ export default function WhyUsSection() {
               `}
             >
               {/* Icon */}
-              <div className={`inline-flex p-4 rounded-2xl mb-6 transition-colors duration-300
+              <div className={`inline-flex p-3 rounded-2xl mb-4 transition-colors duration-300
                 ${reason.color === 'yellow' ? 'bg-brand/20 text-ink group-hover:bg-brand group-hover:text-ink'
                   : reason.color === 'teal' ? 'bg-teal/20 text-teal group-hover:bg-teal group-hover:text-white'
                   : 'bg-green/20 text-green group-hover:bg-green group-hover:text-white'}
@@ -80,7 +80,7 @@ export default function WhyUsSection() {
               </div>
 
               {/* Stat badge */}
-              <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4
+              <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3
                 ${reason.color === 'yellow' ? 'bg-brand/20 text-ink'
                   : reason.color === 'teal' ? 'bg-teal/20 text-teal'
                   : 'bg-green/20 text-green'}

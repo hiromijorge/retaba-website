@@ -64,10 +64,10 @@ export default function HomePage() {
       <TrustBadges />
 
       {/* Certifications — moved up: first thing B2B procurement checks */}
-      <section className="py-16 lg:py-20 bg-surface/80">
+      <section className="py-14 lg:py-16 bg-surface/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Stat-led header — big number anchors the section */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-14">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 lg:mb-12">
             <div>
               <span className="text-[72px] sm:text-[88px] font-black text-green leading-none">3</span>
               <p className="text-ink font-black text-2xl sm:text-3xl mt-1">Sertifikasi Resmi</p>
@@ -107,7 +107,7 @@ export default function HomePage() {
             ].map((cert) => (
               <div
                 key={cert.title}
-                className={`p-8 rounded-3xl border-2 text-center transition-all duration-300 hover:-translate-y-1 ${
+                className={`p-7 rounded-3xl border-2 text-center transition-all duration-300 hover:-translate-y-1 ${
                   cert.color === 'yellow'
                     ? 'bg-brand/10 border-brand/30'
                     : cert.color === 'teal'
@@ -115,7 +115,7 @@ export default function HomePage() {
                     : 'bg-green/10 border-green/30'
                 }`}
               >
-                <div className="text-5xl mb-6">{cert.icon}</div>
+                <div className="text-4xl mb-4">{cert.icon}</div>
                 <div className="font-black text-2xl mb-2 text-ink">{cert.title}</div>
                 <div className="text-ink/50 text-xs mb-4 font-mono">{cert.number}</div>
                 <p className="text-ink/60 text-sm">{cert.desc}</p>
@@ -129,10 +129,10 @@ export default function HomePage() {
       <WhyUsSection />
 
       {/* Menu Preview — single entry point */}
-      <section className="py-24 lg:py-32 bg-white">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Left-aligned editorial header — breaks center pattern */}
-          <div className="mb-12 lg:mb-16">
+          <div className="mb-10 lg:mb-14">
             <p className="text-green font-bold text-sm uppercase tracking-widest mb-3">100+ Pilihan</p>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-ink leading-tight">
               Menu dari 6<br />kuliner dunia.
@@ -142,7 +142,7 @@ export default function HomePage() {
             </p>
           </div>
           <MenuGrid preview />
-          <div className="text-center mt-12">
+          <div className="text-center mt-10">
             <Link href="/menu" className="inline-flex items-center gap-2 bg-brand hover:bg-brand/90 text-ink px-8 py-4 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-brand/30">
               Lihat Semua Menu
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,7 +179,7 @@ export default function HomePage() {
       <TestimonialSlider />
 
       {/* CTA Banner — single primary action + price anchor */}
-      <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand/5 via-transparent to-teal/5" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

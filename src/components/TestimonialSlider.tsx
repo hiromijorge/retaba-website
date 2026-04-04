@@ -26,10 +26,10 @@ export default function TestimonialSlider() {
   const testimonial = testimonials[current];
 
   return (
-    <section className="py-24 lg:py-32 bg-surface/80">
+    <section className="py-16 lg:py-24 bg-surface/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Pull-quote style header — breaks the badge/title/highlight pattern */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <div
             className="text-[120px] font-serif leading-none select-none mb-[-1.5rem]"
             style={{ color: '#F7D200', opacity: 0.5 }}
@@ -49,7 +49,7 @@ export default function TestimonialSlider() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -direction * 60 }}
               transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className="relative bg-white rounded-3xl p-8 sm:p-12 shadow-xl shadow-ink/5"
+              className="relative bg-white rounded-3xl p-8 sm:p-10 shadow-xl shadow-ink/5"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-6">
