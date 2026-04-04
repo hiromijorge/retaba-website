@@ -58,13 +58,13 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/60 to-transparent" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 rounded-full px-4 py-1.5 mb-4">
-            <span className="text-green text-sm font-medium">Tentang Kami</span>
+          <div className="inline-flex items-center gap-2 bg-brand/20 border border-brand/40 rounded-full px-4 py-1.5 mb-4">
+            <span className="text-brand text-sm font-bold">Tentang Kami</span>
           </div>
-          <h1 className="text-5xl sm:text-6xl font-black text-ink mb-4">
-            Kami adalah <span className="text-green">RETABA</span>
+          <h1 className="text-5xl sm:text-6xl font-black text-white mb-4">
+            Kami adalah <span className="text-brand">RETABA</span>
           </h1>
-          <p className="text-ink/60 text-xl max-w-2xl">
+          <p className="text-white/70 text-xl max-w-2xl">
             PT. Receh Tapi Banyak — mitra catering terpercaya untuk perusahaan Anda.
           </p>
         </div>
