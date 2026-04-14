@@ -22,6 +22,7 @@ const services = [
       'Sambal khas RETABA',
       'Buah segar penutup',
       'Kerupuk sebagai pelengkap',
+      'Susu segar',
       'Jadwal menu mingguan bervariasi',
       'Pengiriman tepat waktu',
     ],
@@ -172,13 +173,18 @@ export default function ServicesPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-ink mb-4">Area Layanan</h2>
-          <p className="text-ink/50 mb-10">RETABA saat ini melayani di tiga kota utama</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            {['Tangerang', 'Salatiga', 'Solo'].map((city) => (
-              <div key={city} className="p-6 rounded-2xl bg-ink/5 border border-border text-center">
+          <p className="text-ink/50 mb-10">RETABA saat ini melayani di empat kota utama</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {[
+              { city: 'Tangerang', province: 'Banten' },
+              { city: 'Semarang', province: 'Jawa Tengah' },
+              { city: 'Salatiga', province: 'Jawa Tengah' },
+              { city: 'Solo', province: 'Jawa Tengah' },
+            ].map((loc) => (
+              <div key={loc.city} className="p-6 rounded-2xl bg-ink/5 border border-border text-center">
                 <div className="text-4xl mb-3">📍</div>
-                <div className="text-ink font-bold text-lg">{city}</div>
-                <div className="text-ink/40 text-sm mt-1">Jawa Tengah / Banten</div>
+                <div className="text-ink font-bold text-lg">{loc.city}</div>
+                <div className="text-ink/40 text-sm mt-1">{loc.province}</div>
               </div>
             ))}
           </div>

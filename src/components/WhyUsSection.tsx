@@ -19,12 +19,13 @@ const reasons = [
   {
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
       </svg>
     ),
     title: 'Pengiriman On-Time',
-    description: 'Sistem logistik terintegrasi ke Tangerang, Salatiga & Solo. Pengiriman harian tepat waktu — bukan janji, tapi komitmen operasional kami setiap hari.',
-    stat: 'Tangerang · Salatiga · Solo',
+    description: 'Sistem logistik terintegrasi ke Tangerang, Semarang, Salatiga & Solo. Pengiriman harian tepat waktu — bukan janji, tapi komitmen operasional kami setiap hari.',
+    stat: 'Tangerang · Semarang · Salatiga · Solo',
     color: 'teal',
   },
   {
@@ -38,6 +39,17 @@ const reasons = [
     stat: 'Halal MUI · SLHS · Lab Tested',
     color: 'green',
   },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+    title: 'Dipercaya Brand Besar',
+    description: 'Melayani 20+ perusahaan ternama seperti Indofood, Wipro Unza, Konimex, dan Graphic Packaging. Kepercayaan yang terbukti dari tahun ke tahun.',
+    stat: '20+ Klien Korporat',
+    color: 'yellow',
+  },
 ];
 
 export default function WhyUsSection() {
@@ -48,14 +60,14 @@ export default function WhyUsSection() {
     <section ref={ref} className="py-16 lg:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          badge="Mengapa RETABA"
-          title="Tiga Alasan"
+          badge="WHY US?"
+          title="Empat Alasan"
           highlight="Konkret"
           description="Bukan klaim generik — ini yang membedakan RETABA dari catering lain."
         />
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, i) => (
             <motion.div
               key={reason.title}

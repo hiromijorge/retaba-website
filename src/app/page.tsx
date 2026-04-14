@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
 import TrustBadges from '@/components/TrustBadges';
 import WhyUsSection from '@/components/WhyUsSection';
 import MenuGrid from '@/components/MenuGrid';
 import ClientLogos from '@/components/ClientLogos';
 import TestimonialSlider from '@/components/TestimonialSlider';
+import { getCloudinaryUrl } from '@/lib/cloudinary';
 
 const siteUrl = 'https://retaba.co.id';
 const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
@@ -20,7 +22,7 @@ const jsonLd = {
   email: 'info@retaba.co.id',
   foundingDate: '2023',
   servesCuisine: ['Indonesian', 'Japanese', 'Chinese', 'Korean', 'Indian'],
-  areaServed: ['Tangerang', 'Salatiga', 'Solo'],
+  areaServed: ['Tangerang', 'Semarang', 'Salatiga', 'Solo'],
   address: [
     {
       '@type': 'PostalAddress',
@@ -64,50 +66,40 @@ export default function HomePage() {
       <TrustBadges />
 
       {/* Certifications — moved up: first thing B2B procurement checks */}
-      <section className="py-14 lg:py-16 bg-surface/80">
+      <section id="sertifikasi" className="py-14 lg:py-16 bg-surface/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Stat-led header — big number anchors the section */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 lg:mb-12">
             <div>
-              <span className="text-[72px] sm:text-[88px] font-black text-green leading-none">3</span>
+              <span className="text-[72px] sm:text-[88px] font-black text-green leading-none">2</span>
               <p className="text-ink font-black text-2xl sm:text-3xl mt-1">Sertifikasi Resmi</p>
               <p className="text-ink/50 text-sm mt-2 max-w-sm">
                 Dapat diverifikasi secara independen — bukan sekadar klaim di brosur.
               </p>
             </div>
-            <div className="flex items-center gap-3 bg-white border border-border rounded-2xl px-5 py-3 self-start lg:self-auto">
-              <div className="w-2 h-2 rounded-full bg-green" />
-              <span className="text-ink/60 text-sm font-medium">Halal MUI · SLHS · Lab Tested</span>
-            </div>
+
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
               {
                 title: 'Halal MUI',
                 number: 'No. ID33110014801751123',
-                icon: '☪',
+                image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/1.png',
                 desc: 'Sertifikasi Halal resmi dari Majelis Ulama Indonesia — dapat diverifikasi online',
                 color: 'yellow',
               },
               {
                 title: 'SLHS',
                 number: 'Sertifikat Laik Higiene Sanitasi',
-                icon: '🏅',
+                image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/2.png',
                 desc: 'Memenuhi standar higiene dan sanitasi pangan nasional dari pemerintah',
                 color: 'teal',
-              },
-              {
-                title: 'Uji Lab',
-                number: 'Laboratory Tested',
-                icon: '🔬',
-                desc: 'Setiap produk diuji keamanannya di laboratorium pangan independen',
-                color: 'green',
               },
             ].map((cert) => (
               <div
                 key={cert.title}
-                className={`p-7 rounded-3xl border-2 text-center transition-all duration-300 hover:-translate-y-1 ${
+                className={`p-5 rounded-3xl border-2 text-center transition-all duration-300 hover:-translate-y-1 ${
                   cert.color === 'yellow'
                     ? 'bg-brand/10 border-brand/30'
                     : cert.color === 'teal'
@@ -115,7 +107,15 @@ export default function HomePage() {
                     : 'bg-green/10 border-green/30'
                 }`}
               >
-                <div className="text-4xl mb-4">{cert.icon}</div>
+                <div className="relative w-full aspect-[4/3] mb-5 rounded-2xl overflow-hidden bg-white shadow-sm">
+                  <Image
+                    src={getCloudinaryUrl(cert.image, { width: 800 })}
+                    alt={`Sertifikat ${cert.title}`}
+                    fill
+                    className="object-contain p-2"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                </div>
                 <div className="font-black text-2xl mb-2 text-ink">{cert.title}</div>
                 <div className="text-ink/50 text-xs mb-4 font-mono">{cert.number}</div>
                 <p className="text-ink/60 text-sm">{cert.desc}</p>
@@ -135,7 +135,7 @@ export default function HomePage() {
           <div className="mb-10 lg:mb-14">
             <p className="text-green font-bold text-sm uppercase tracking-widest mb-3">100+ Pilihan</p>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-ink leading-tight">
-              Menu dari 6<br />kuliner dunia.
+              Menu dari 6<br />ragam cita rasa.
             </h2>
             <p className="text-ink/50 mt-4 text-lg max-w-lg">
               Nusantara, Jepang, Korea, India, China, dan menu kustom — jadwal berganti tiap minggu.
@@ -160,7 +160,7 @@ export default function HomePage() {
       <section className="py-6 bg-ink">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
-            <span className="text-white/50 text-xs uppercase tracking-widest font-bold">Ditampilkan di YouTube</span>
+            <span className="text-white/50 text-xs uppercase tracking-widest font-bold">Our Review</span>
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
               <span className="text-white font-bold text-sm">ShantyDenny</span>
               <span className="text-white/40 text-xs">3,38 juta subscriber</span>
@@ -191,7 +191,7 @@ export default function HomePage() {
 
           {/* Price anchor */}
           <div className="inline-flex items-center gap-3 bg-brand/20 border border-brand/40 rounded-2xl px-6 py-3 mb-6">
-            <span className="text-ink font-bold text-sm">Paket makan siang harian</span>
+            <span className="text-ink font-bold text-sm">Paket Catering Corporate harian</span>
             <span className="text-ink/30">·</span>
             <span className="text-green font-black text-sm">
               {/* TODO: ganti dengan harga aktual Anda */}
@@ -215,9 +215,9 @@ export default function HomePage() {
             Minta Penawaran via WhatsApp
           </a>
 
-          <p className="mt-4 text-ink/40 text-sm">
+          <p className="mt-4 text-ink/60 text-base">
             Atau kirim email ke{' '}
-            <a href="mailto:info@retaba.co.id" className="text-green hover:underline font-medium">
+            <a href="mailto:info@retaba.co.id" className="text-green hover:underline font-semibold">
               info@retaba.co.id
             </a>
           </p>

@@ -31,17 +31,17 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex gap-3 mb-8"
+              className="flex gap-4 mb-8"
             >
-              <div className="bg-white rounded-xl px-3 py-2 flex items-center gap-2 shadow-sm">
-                <span className="text-teal font-black text-xs uppercase tracking-wide">SLHS</span>
+              <div className="bg-white rounded-xl px-4 py-3 flex items-center justify-center shadow-sm w-28 h-16">
+                <Image src="/sertifikasi/logo_slhs.png" alt="SLHS Certified" width={80} height={40} className="object-contain max-h-10 w-auto" />
               </div>
-              <div className="bg-white rounded-xl px-3 py-2 flex items-center gap-2 shadow-sm">
-                <span className="text-green font-black text-xs">HALAL</span>
-                <span className="text-muted text-[10px]">MUI</span>
+              <div className="bg-white rounded-xl px-4 py-3 flex items-center justify-center shadow-sm w-28 h-16">
+                <Image src="/sertifikasi/Halal-MUI.svg" alt="Halal MUI" width={90} height={45} className="object-contain max-h-12 w-auto" />
               </div>
-              <div className="bg-white rounded-xl px-3 py-2 flex items-center gap-2 shadow-sm">
-                <span className="text-ink font-black text-xs">Lab Tested</span>
+              <div className="bg-white rounded-xl px-4 py-3 flex items-center gap-2 shadow-sm">
+                <span className="text-green font-black text-sm">🔬 LAB</span>
+                <span className="text-muted text-xs">Tested</span>
               </div>
             </motion.div>
 
@@ -58,7 +58,7 @@ export default function HeroSection() {
                 <span className="text-green">Tepat Waktu.</span>
               </h1>
               <p className="text-ink/70 text-lg leading-relaxed max-w-md mb-8">
-                Mitra catering korporat untuk perusahaan dan pabrik di Tangerang, Salatiga, dan Solo.
+                Mitra catering korporat untuk perusahaan dan pabrik di Tangerang, Semarang, Salatiga, dan Solo.
                 Bersertifikasi resmi — bukan sekadar klaim.
               </p>
             </motion.div>
@@ -83,7 +83,7 @@ export default function HeroSection() {
               </a>
               <Link
                 href="/menu"
-                className="inline-flex items-center justify-center gap-2 text-ink/60 hover:text-green font-semibold text-sm transition-colors"
+                className="inline-flex items-center justify-center gap-2 text-ink/80 hover:text-green font-bold text-base transition-colors"
               >
                 Lihat Menu →
               </Link>
@@ -153,7 +153,7 @@ export default function HeroSection() {
             {[
               { value: '20+', label: 'Perusahaan Klien' },
               { value: '5000+', label: 'Porsi per Hari' },
-              { value: '3', label: 'Kota Layanan' },
+              { value: '4', label: 'Kota Layanan' },
               { value: '100+', label: 'Variasi Menu' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">

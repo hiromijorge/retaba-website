@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { menuItems, menuCategories, MenuItem } from '@/data/menu';
+import { getCloudinaryUrl } from '@/lib/cloudinary';
 
 interface MenuGridProps {
   preview?: boolean;
@@ -61,7 +62,7 @@ export default function MenuGrid({ preview = false }: MenuGridProps) {
             >
               <div className="relative h-44 overflow-hidden">
                 <Image
-                  src={item.image}
+                  src={getCloudinaryUrl(item.image, { width: 600, height: 450 })}
                   alt={`${item.name} - menu catering RETABA`}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"

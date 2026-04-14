@@ -3,31 +3,32 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Image from 'next/image';
 
 const badges = [
   {
-    icon: '☪',
+    type: 'logo',
+    src: '/sertifikasi/Halal-MUI.svg',
     title: 'Halal MUI',
     subtitle: 'ID33110014801751123',
-    color: 'yellow',
   },
   {
-    icon: '🏅',
+    type: 'logo',
+    src: '/sertifikasi/logo_slhs.png',
     title: 'SLHS Certified',
     subtitle: 'Sertifikat Laik Higiene',
-    color: 'teal',
   },
   {
+    type: 'icon',
     icon: '🔬',
     title: 'Lab Tested',
     subtitle: 'Teruji Keamanan Pangan',
-    color: 'green',
   },
   {
+    type: 'icon',
     icon: '🏢',
     title: '20+ Klien Aktif',
     subtitle: 'Indofood, Wipro, Konimex & lainnya',
-    color: 'yellow',
   },
 ];
 
@@ -47,13 +48,21 @@ export default function TrustBadges() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="flex items-center gap-4 py-4"
             >
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0
-                ${badge.color === 'yellow' ? 'bg-brand/20 text-brand'
-                  : badge.color === 'teal' ? 'bg-teal/20 text-teal'
-                  : 'bg-white/10 text-white'}
-              `}>
-                {badge.icon}
-              </div>
+              {badge.type === 'logo' ? (
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center bg-white flex-shrink-0 overflow-hidden p-1.5">
+                  <Image 
+                    src={badge.src!} 
+                    alt={badge.title} 
+                    width={badge.title.includes('Halal') ? 60 : 56} 
+                    height={badge.title.includes('Halal') ? 60 : 56} 
+                    className={`object-contain w-full h-full ${badge.title.includes('Halal') ? 'scale-110' : ''}`} 
+                  />
+                </div>
+              ) : (
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl flex-shrink-0 bg-white/10">
+                  {badge.icon}
+                </div>
+              )}
               <div>
                 <div className="font-bold text-white text-sm">{badge.title}</div>
                 <div className="text-white/60 text-xs">{badge.subtitle}</div>

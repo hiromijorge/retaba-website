@@ -45,7 +45,7 @@ const contactMethods = [
     label: 'Telepon',
     value: '0888 7888 808',
     href: 'tel:08887888808',
-    desc: 'Jam kerja 08.00 - 17.00 WIB',
+    desc: 'Jam kerja 24 jam',
     color: 'white',
     cta: 'Hubungi',
   },
@@ -84,7 +84,7 @@ export default function ContactPage() {
             <span className="text-green text-sm font-medium">Hubungi Kami</span>
           </div>
           <h1 className="text-5xl sm:text-6xl font-black text-ink mb-6">
-            Mari <span className="text-green">Berbicara</span>
+            Hubungi <span className="text-green">Kami</span>
           </h1>
           <p className="text-ink/60 text-xl max-w-2xl mx-auto">
             Tim RETABA siap membantu Anda menemukan solusi catering terbaik untuk perusahaan Anda.

@@ -41,22 +41,22 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 lg:h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 rounded-lg overflow-hidden shadow-sm">
+        <Link href="/" className="flex items-center gap-4 group">
+          <div className="relative w-24 h-24">
             <Image
-              src="/retaba-logo.png"
+              src="/logo/retaba-logo-transparent.png"
               alt="RETABA Logo"
               fill
-              className="object-cover"
-              sizes="40px"
+              className="object-contain"
+              sizes="96px"
               priority
             />
           </div>
           <div className="flex flex-col leading-none">
-            <span className="font-black text-green text-lg tracking-tight group-hover:text-teal transition-colors">
+            <span className="font-black text-green text-2xl tracking-tight group-hover:text-teal transition-colors">
               RETABA
             </span>
-            <span className="text-muted text-[9px] tracking-[0.2em] uppercase">Catering</span>
+            <span className="text-muted text-xs tracking-[0.2em] uppercase">Catering</span>
           </div>
         </Link>
 
@@ -68,7 +68,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative px-3 py-2 text-sm font-semibold transition-colors rounded-lg ${
+                className={`relative px-3 py-2 text-base font-bold transition-colors rounded-lg ${
                   isActive ? 'text-green' : 'text-ink/70 hover:text-green'
                 }`}
               >

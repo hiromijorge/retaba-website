@@ -32,14 +32,14 @@ export default function Footer() {
           
           {/* Brand - takes 5 columns */}
           <div className="lg:col-span-5">
-            <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-lg ring-2 ring-white/10">
+            <Link href="/" className="flex items-center gap-4 mb-6 group">
+              <div className="relative w-20 h-20 rounded-xl bg-white p-2">
                 <Image
-                  src="/retaba-logo.png"
+                  src="/logo/retaba-logo-transparent.png"
                   alt="RETABA Logo"
                   fill
-                  className="object-cover"
-                  sizes="48px"
+                  className="object-contain"
+                  sizes="80px"
                 />
               </div>
               <div className="flex flex-col leading-none">
@@ -53,16 +53,16 @@ export default function Footer() {
             
             {/* Certifications */}
             <div className="flex flex-wrap gap-3">
-              {[
-                { label: 'HALAL', sub: 'MUI Certified', color: 'bg-brand/20 text-brand border-brand/30' },
-                { label: 'SLHS', sub: 'Certified', color: 'bg-teal/20 text-teal border-teal/30' },
-                { label: 'LAB', sub: 'Tested', color: 'bg-white/10 text-white border-white/20' },
-              ].map((cert) => (
-                <div key={cert.label} className={`px-4 py-2 rounded-xl border ${cert.color} text-center`}>
-                  <div className="text-xs font-black">{cert.label}</div>
-                  <div className="text-[10px] opacity-70 mt-0.5">{cert.sub}</div>
-                </div>
-              ))}
+              <div className="bg-white rounded-xl w-20 h-14 flex items-center justify-center">
+                <Image src="/sertifikasi/Halal-MUI.svg" alt="Halal MUI" width={64} height={40} className="max-h-10 w-auto object-contain px-1" />
+              </div>
+              <div className="bg-white rounded-xl w-20 h-14 flex items-center justify-center">
+                <Image src="/sertifikasi/logo_slhs.png" alt="SLHS" width={56} height={36} className="max-h-9 w-auto object-contain px-2" />
+              </div>
+              <div className="bg-white/10 rounded-xl w-20 h-14 flex flex-col items-center justify-center border border-white/20 text-center">
+                <div className="text-sm font-black text-white">LAB</div>
+                <div className="text-xs text-white/70">Tested</div>
+              </div>
             </div>
           </div>
 
@@ -103,7 +103,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-white/30 text-xs uppercase tracking-wide mb-1">Lokasi</div>
-                  <span className="text-white/70 text-sm">Tangerang · Salatiga · Solo</span>
+                  <span className="text-white/70 text-sm">Tangerang · Semarang · Salatiga · Solo</span>
                 </div>
               </li>
               

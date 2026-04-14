@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { getCloudinaryUrl } from '@/lib/cloudinary';
 
 export const metadata: Metadata = {
   title: 'Galeri',
@@ -10,77 +11,77 @@ export const metadata: Metadata = {
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&h=400&fit=crop',
-    alt: 'Hidangan seafood balado RETABA',
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144054/retaba/food-images/13.png',
+    alt: 'Udang Balado RETABA',
     span: 'lg:col-span-2',
-    label: 'Seafood Balado',
+    label: 'Udang Balado',
   },
   {
-    src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=400&fit=crop',
-    alt: 'Rendang daging RETABA',
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144096/retaba/food-images/4.png',
+    alt: 'Ayam Rendang RETABA',
     span: '',
-    label: 'Rendang Daging',
+    label: 'Ayam Rendang',
   },
   {
-    src: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=400&h=400&fit=crop',
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144047/retaba/food-images/1.png',
     alt: 'Chicken Katsu RETABA',
     span: '',
     label: 'Chicken Katsu',
   },
   {
-    src: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop',
-    alt: 'Sayuran segar RETABA',
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144099/retaba/food-images/41.png',
+    alt: 'Tumis Buncis RETABA',
     span: '',
-    label: 'Sayuran Segar',
+    label: 'Tumis Buncis',
   },
   {
-    src: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=600&h=400&fit=crop',
-    alt: 'Prasmanan buffet event RETABA',
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144112/retaba/food-images/5.png',
+    alt: 'Daging Rendang RETABA',
     span: 'lg:col-span-2 lg:row-span-2',
-    label: 'Buffet Prasmanan',
+    label: 'Daging Rendang',
     tall: true,
   },
   {
-    src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop',
-    alt: 'Aneka masakan RETABA',
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144066/retaba/food-images/21.png',
+    alt: 'Gado-Gado RETABA',
     span: '',
-    label: 'Aneka Masakan',
+    label: 'Gado-Gado',
   },
   {
-    src: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop',
-    alt: 'Penyajian catering RETABA',
-    span: '',
-    label: 'Penyajian Menarik',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop',
-    alt: 'Nasi box RETABA',
-    span: 'lg:col-span-2',
-    label: 'Nasi Box',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop',
-    alt: 'Sup hangat RETABA',
-    span: '',
-    label: 'Sop Segar',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1484980972926-edee96e0960d?w=400&h=300&fit=crop',
-    alt: 'Snack box event RETABA',
-    span: '',
-    label: 'Snack Box',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop',
-    alt: 'Dapur profesional RETABA',
-    span: 'lg:col-span-2',
-    label: 'Dapur Profesional',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop',
-    alt: 'Mie goreng RETABA',
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144084/retaba/food-images/31.png',
+    alt: 'Mie Goreng RETABA',
     span: '',
     label: 'Mie Goreng',
+  },
+  {
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144129/retaba/food-images/8.png',
+    alt: 'Ayam Goreng RETABA',
+    span: 'lg:col-span-2',
+    label: 'Ayam Goreng',
+  },
+  {
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144108/retaba/food-images/47.png',
+    alt: 'Sop Baso RETABA',
+    span: '',
+    label: 'Sop Baso',
+  },
+  {
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144068/retaba/food-images/22.png',
+    alt: 'Kentang Balado RETABA',
+    span: '',
+    label: 'Kentang Balado',
+  },
+  {
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144113/retaba/food-images/50.png',
+    alt: 'Tumis Capcay RETABA',
+    span: 'lg:col-span-2',
+    label: 'Tumis Capcay',
+  },
+  {
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144123/retaba/food-images/57.png',
+    alt: 'Susu Segar RETABA',
+    span: '',
+    label: 'Susu Segar',
   },
 ];
 
@@ -112,7 +113,7 @@ export default function GalleryPage() {
                 className={`relative overflow-hidden rounded-2xl group cursor-pointer ${img.span} ${img.tall ? 'row-span-2' : ''}`}
               >
                 <Image
-                  src={img.src}
+                  src={getCloudinaryUrl(img.src, { width: img.span.includes('col-span-2') ? 1200 : 800, height: img.tall ? 800 : 600 })}
                   alt={img.alt}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
