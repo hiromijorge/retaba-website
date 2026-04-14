@@ -17,7 +17,7 @@ const values = [
     title: 'Kualitas Tanpa Kompromi',
     description: 'Setiap bahan dipilih dengan teliti, diproses secara higienis, dan telah melalui uji laboratorium keamanan pangan.',
     icon: '⭐',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop',
+    image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776156297/retaba/about/cooking.jpg',
   },
   {
     title: 'Halal & Terpercaya',
@@ -30,13 +30,13 @@ const values = [
     title: 'Fleksibel & Responsif',
     description: 'Menu dan paket disesuaikan dengan kebutuhan dan anggaran perusahaan Anda. Tim kami mudah dihubungi dan cepat merespons perubahan mendadak.',
     icon: '⚡',
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop',
+    image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776156298/retaba/about/kitchen.jpg',
   },
   {
     title: 'Kemitraan Jangka Panjang',
     description: 'Kami membangun hubungan yang saling menguntungkan dan jangka panjang dengan setiap klien kami.',
     icon: '🤝',
-    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=300&fit=crop',
+    image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776156299/retaba/about/handshake.jpg',
   },
 ];
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
       <section className="relative min-h-[45vh] flex items-end pb-12 overflow-hidden bg-white pt-20">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&h=800&fit=crop"
+            src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776156300/retaba/about/hero-bg.jpg"
             alt="Hidangan RETABA"
             fill
             className="object-cover opacity-20"
@@ -103,7 +103,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative h-96 rounded-3xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=500&fit=crop"
+                  src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776156297/retaba/about/cooking.jpg"
                   alt="Tim RETABA sedang memasak"
                   fill
                   className="object-cover"
@@ -159,7 +159,7 @@ export default function AboutPage() {
       <section className="relative py-16 bg-brand/5 border-t border-brand/20 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&h=600&fit=crop"
+            src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776156301/retaba/about/cta-bg.jpg"
             alt="Jabat tangan kolaborasi"
             fill
             className="object-cover opacity-10"

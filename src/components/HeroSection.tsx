@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { getCloudinaryUrl } from '@/lib/cloudinary';
 import Link from 'next/link';
 const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
 
@@ -34,10 +35,10 @@ export default function HeroSection() {
               className="flex gap-4 mb-8"
             >
               <div className="bg-white rounded-xl px-4 py-3 flex items-center justify-center shadow-sm w-28 h-16">
-                <Image src="/sertifikasi/logo_slhs.png" alt="SLHS Certified" width={80} height={40} className="object-contain max-h-10 w-auto" />
+                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/2.png" alt="SLHS Certified" width={80} height={40} className="object-contain max-h-10 w-auto" />
               </div>
               <div className="bg-white rounded-xl px-4 py-3 flex items-center justify-center shadow-sm w-28 h-16">
-                <Image src="/sertifikasi/Halal-MUI.svg" alt="Halal MUI" width={90} height={45} className="object-contain max-h-12 w-auto" />
+                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/1.png" alt="Halal MUI" width={90} height={45} className="object-contain max-h-12 w-auto" />
               </div>
               <div className="bg-white rounded-xl px-4 py-3 flex items-center gap-2 shadow-sm">
                 <span className="text-green font-black text-sm">🔬 LAB</span>
@@ -101,7 +102,7 @@ export default function HeroSection() {
               {/* Main food image */}
               <div className="rounded-3xl overflow-hidden shadow-2xl shadow-ink/20 ring-4 ring-white aspect-[4/3]">
                 <Image
-                  src="https://images.unsplash.com/photo-1555244162-803834f70033?w=700&h=525&fit=crop"
+                  src={getCloudinaryUrl('https://res.cloudinary.com/dr62jpnos/image/upload/v1776144112/retaba/food-images/5.png', { width: 800, height: 600 })}
                   alt="Hidangan catering berkualitas RETABA — sajian Nusantara pilihan untuk perusahaan"
                   fill
                   className="object-cover"

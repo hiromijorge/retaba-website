@@ -12,8 +12,8 @@ export interface MenuItem {
 
 export const menuItems: MenuItem[] = [
   // Protein/Main
-  { id: 1, name: 'Chicken Katsu', category: 'protein', type: 'Japanese', image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144047/retaba/food-images/1.png', description: 'Ayam goreng tepung renyah ala Jepang' },
-  { id: 2, name: 'Chicken Teriyaki', category: 'protein', type: 'Japanese', image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144063/retaba/food-images/2.png', description: 'Ayam panggang dengan saus teriyaki manis' },
+  { id: 1, name: 'Chicken Katsu', category: 'protein', type: 'Japanese', image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144124/retaba/food-images/58.png', description: 'Ayam goreng tepung renyah ala Jepang' },
+  { id: 2, name: 'Chicken Teriyaki', category: 'protein', type: 'Japanese', image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144124/retaba/food-images/58.png', description: 'Ayam panggang dengan saus teriyaki manis' },
   { id: 3, name: 'Beef Teriyaki', category: 'protein', type: 'Japanese', image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144080/retaba/food-images/3.png', description: 'Daging sapi panggang dengan saus teriyaki' },
   { id: 4, name: 'Ayam Rendang', category: 'protein', type: 'Nusantara', image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144096/retaba/food-images/4.png', description: 'Ayam masak rendang bumbu rempah khas Minang' },
   { id: 5, name: 'Daging Rendang', category: 'protein', type: 'Nusantara', image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144112/retaba/food-images/5.png', description: 'Daging sapi empuk masak rendang khas Minang' },
