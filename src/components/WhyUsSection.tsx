@@ -11,9 +11,9 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
       </svg>
     ),
-    title: '100+ Variasi Menu',
-    description: 'Nusantara, Jepang, Korea, India, China, dan menu kustom. Jadwal berganti setiap minggu — karyawan tidak bosan, produktivitas terjaga.',
-    stat: '6 Kuliner Dunia',
+    title: 'Menu Beragam, Bebas Bosan',
+    description: 'Dari Nusantara sampai Jepang, Korea, India, China, hingga menu kustom. Tiap minggu ada rotasi menu — jadi karyawan selalu punya sesuatu yang baru dinikmati.',
+    stat: '6 Ragam Kuliner',
     color: 'yellow',
   },
   {
@@ -23,8 +23,8 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
       </svg>
     ),
-    title: 'Pengiriman On-Time',
-    description: 'Sistem logistik terintegrasi ke Tangerang, Semarang, Salatiga & Solo. Pengiriman harian tepat waktu — bukan janji, tapi komitmen operasional kami setiap hari.',
+    title: 'Antar Tepat Waktu',
+    description: 'Layanan ke Tangerang, Semarang, Salatiga, dan Solo. Tim logistik kami jalan setiap hari, bukan sekadar janji di kertas.',
     stat: 'Tangerang · Semarang · Salatiga · Solo',
     color: 'teal',
   },
@@ -34,8 +34,8 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: 'Tersertifikasi Resmi',
-    description: 'Halal MUI No. ID33110014801751123 — dapat diverifikasi. SLHS resmi dari pemerintah. Diuji laboratorium pangan independen. Bukan sekadar klaim.',
+    title: 'Sertifikat Resmi & Bisa Dicek',
+    description: 'Halal MUI, SLHS, dan hasil uji lab independen. Semuanya bisa diverifikasi langsung — bukan klaim tanpa bukti.',
     stat: 'Halal MUI · SLHS · Lab Tested',
     color: 'green',
   },
@@ -45,8 +45,8 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    title: 'Dipercaya Brand Besar',
-    description: 'Melayani 20+ perusahaan ternama seperti Indofood, Wipro Unza, Konimex, dan Graphic Packaging. Kepercayaan yang terbukti dari tahun ke tahun.',
+    title: 'Diandalkan Perusahaan Besar',
+    description: 'Indofood, Wipro Unza, Konimex, Graphic Packaging, dan lebih dari 20 perusahaan lain sudah jadi langganan setia.',
     stat: '20+ Klien Korporat',
     color: 'yellow',
   },
@@ -60,10 +60,9 @@ export default function WhyUsSection() {
     <section ref={ref} className="py-16 lg:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          badge="WHY US?"
-          title="Empat Alasan"
-          highlight="Konkret"
-          description="Bukan klaim generik — ini yang membedakan RETABA dari catering lain."
+          title="Alasan Bekerja Sama dengan"
+          highlight="RETABA"
+          description="Ini yang membedakan RETABA dari catering lain."
         />
 
         {/* Cards */}
@@ -82,26 +81,28 @@ export default function WhyUsSection() {
                   : 'bg-green/5 border-green/20 hover:border-green/40'}
               `}
             >
-              {/* Icon */}
-              <div className={`inline-flex p-3 rounded-2xl mb-4 transition-colors duration-300
-                ${reason.color === 'yellow' ? 'bg-brand/20 text-ink group-hover:bg-brand group-hover:text-ink'
-                  : reason.color === 'teal' ? 'bg-teal/20 text-teal group-hover:bg-teal group-hover:text-white'
-                  : 'bg-green/20 text-green group-hover:bg-green group-hover:text-white'}
-              `}>
-                {reason.icon}
+              {/* Icon + Badge stack */}
+              <div className="mb-4 flex flex-col items-start">
+                <div className={`inline-flex p-3 rounded-2xl transition-colors duration-300
+                  ${reason.color === 'yellow' ? 'bg-brand/20 text-ink group-hover:bg-brand group-hover:text-ink'
+                    : reason.color === 'teal' ? 'bg-teal/20 text-teal group-hover:bg-teal group-hover:text-white'
+                    : 'bg-green/20 text-green group-hover:bg-green group-hover:text-white'}
+                `}>
+                  {reason.icon}
+                </div>
+
+                {/* Stat badge — always below icon */}
+                <div className={`mt-3 inline-block px-3 py-1 rounded-full text-xs font-bold
+                  ${reason.color === 'yellow' ? 'bg-brand/20 text-ink'
+                    : reason.color === 'teal' ? 'bg-teal/20 text-teal'
+                    : 'bg-green/20 text-green'}
+                `}>
+                  {reason.stat}
+                </div>
               </div>
 
-              {/* Stat badge */}
-              <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3
-                ${reason.color === 'yellow' ? 'bg-brand/20 text-ink'
-                  : reason.color === 'teal' ? 'bg-teal/20 text-teal'
-                  : 'bg-green/20 text-green'}
-              `}>
-                {reason.stat}
-              </div>
-
-              <h3 className="text-ink text-2xl font-bold mb-3">{reason.title}</h3>
-              <p className="text-ink/60 leading-relaxed">{reason.description}</p>
+              <h3 className="text-ink text-xl font-bold mb-3">{reason.title}</h3>
+              <p className="text-ink/60 leading-relaxed text-sm">{reason.description}</p>
 
               {/* Hover indicator */}
               <div className={`absolute bottom-0 left-0 right-0 h-1.5 rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left

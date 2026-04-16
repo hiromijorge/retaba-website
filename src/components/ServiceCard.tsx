@@ -18,25 +18,31 @@ export default function ServiceCard({ icon, title, description, features, color,
 
   const colorMap = {
     yellow: {
-      icon: 'bg-yellow/20 text-yellow',
-      border: 'border-yellow/20 hover:border-yellow/40',
-      bg: 'hover:bg-yellow/5',
-      bullet: 'bg-yellow',
-      badge: 'bg-yellow/10 text-yellow',
+      card: 'bg-yellow text-ink',
+      iconBg: 'bg-white/40 text-ink',
+      bullet: 'bg-ink',
+      featureText: 'text-ink/80',
+      desc: 'text-ink/70',
+      shadow: 'shadow-yellow/40',
+      border: 'border-transparent',
     },
     teal: {
-      icon: 'bg-teal/20 text-teal',
-      border: 'border-teal/20 hover:border-teal/40',
-      bg: 'hover:bg-teal/5',
-      bullet: 'bg-teal',
-      badge: 'bg-teal/10 text-teal',
+      card: 'bg-teal text-white',
+      iconBg: 'bg-white/20 text-white',
+      bullet: 'bg-white',
+      featureText: 'text-white/90',
+      desc: 'text-white/80',
+      shadow: 'shadow-teal/40',
+      border: 'border-transparent',
     },
     white: {
-      icon: 'bg-ink/8 text-white',
-      border: 'border-border hover:border-border',
-      bg: 'hover:bg-ink/5',
-      bullet: 'bg-white/60',
-      badge: 'bg-ink/8 text-white',
+      card: 'bg-white text-ink border-2 border-ink',
+      iconBg: 'bg-ink text-white',
+      bullet: 'bg-teal',
+      featureText: 'text-ink/70',
+      desc: 'text-ink/60',
+      shadow: 'shadow-ink/20',
+      border: 'border-ink',
     },
   };
 
@@ -48,21 +54,29 @@ export default function ServiceCard({ icon, title, description, features, color,
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.15 }}
-      className={`group p-8 rounded-3xl bg-ink/5 border ${c.border} ${c.bg} transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`}
+      className={`group relative p-8 rounded-[2rem] ${c.card} transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl ${c.shadow} overflow-hidden`}
     >
-      <div className={`inline-flex p-4 rounded-2xl mb-6 ${c.icon}`}>
-        {icon}
+      {/* Decorative corner circle */}
+      <div className={`absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-30 transition-transform duration-500 group-hover:scale-150 ${
+        color === 'yellow' ? 'bg-white' : color === 'teal' ? 'bg-white' : 'bg-yellow'
+      }`} />
+
+      <div className="relative">
+        <div className={`inline-flex p-4 rounded-2xl mb-5 ${c.iconBg} backdrop-blur-sm`}>
+          {icon}
+        </div>
+        <h3 className="text-2xl font-black mb-3 leading-tight">{title}</h3>
+        <p className={`text-sm leading-relaxed mb-6 ${c.desc}`}>{description}</p>
+
+        <ul className="space-y-2.5">
+          {features.slice(0, 5).map((feature) => (
+            <li key={feature} className="flex items-start gap-3">
+              <span className={`w-1.5 h-1.5 rounded-full mt-2 shrink-0 ${c.bullet}`} />
+              <span className={`text-sm leading-snug ${c.featureText}`}>{feature}</span>
+            </li>
+          ))}
+        </ul>
       </div>
-      <h3 className="text-ink text-xl font-bold mb-3">{title}</h3>
-      <p className="text-ink/50 text-sm leading-relaxed mb-6">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center gap-3">
-            <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${c.bullet}`} />
-            <span className="text-ink/60 text-sm">{feature}</span>
-          </li>
-        ))}
-      </ul>
     </motion.article>
   );
 }

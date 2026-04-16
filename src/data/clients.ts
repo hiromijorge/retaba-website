@@ -65,7 +65,7 @@ export const testimonials = [
     role: 'HR Manager',
     company: 'Indofood Sukses Makmur',
     rating: 5,
-    text: 'Sudah setahun bermitra. Karyawan jarang komplain soal makan — itu sendiri sudah luar biasa. Menu berganti tiap minggu, Halal certified, delivery tidak pernah telat.',
+    text: 'Setahun lebih pakai RETABA, karyawan jarang komplain soal makan. Menu tiap minggu beda, sertifikat Halal lengkap, dan delivery nggak pernah telat.',
     avatar: 'BS',
   },
   {
@@ -74,7 +74,7 @@ export const testimonials = [
     role: 'General Affairs',
     company: 'Konimex',
     rating: 5,
-    text: 'Awalnya ragu karena RETABA masih baru. Tapi setelah trial 1 bulan, langsung perpanjang kontrak. Variasinya banyak, bahan segar, dan timnya responsif kalau ada perubahan mendadak.',
+    text: 'Awalnya ragu karena RETABA masih baru. Tapi setelah coba trial 1 bulan, langsung perpanjang kontrak. Variasi banyak, bahan segar, dan timnya cepat tanggap kalau ada perubahan mendadak.',
     avatar: 'SR',
   },
   {
@@ -83,7 +83,7 @@ export const testimonials = [
     role: 'Operations Manager',
     company: 'Graphic Packaging International',
     rating: 5,
-    text: 'Tiga hal yang kami cari: Halal MUI, tepat waktu, dan menu tidak itu-itu saja. RETABA memenuhi ketiganya — dan harganya masuk anggaran perusahaan.',
+    text: 'Tiga hal yang kami cari: Halal MUI, antar tepat waktu, dan menu nggak itu-itu aja. RETABA cocok semua — plus harganya masuk anggaran.',
     avatar: 'AF',
   },
   {
@@ -92,7 +92,7 @@ export const testimonials = [
     role: 'Event Coordinator',
     company: 'Front One Hotel',
     rating: 5,
-    text: 'Untuk event corporate kami, kualitas sajiannya konsisten dari persiapan sampai penyajian. Tim RETABA mudah diajak koordinasi dan tidak pernah mengecewakan di hari-H.',
+    text: 'Buat event corporate kami, kualitas sajiannya konsisten dari persiapan sampai di meja. Tim RETABA gampang diajak koordinasi dan nggak pernah mengecewakan di hari-H.',
     avatar: 'DK',
   },
   {
@@ -101,7 +101,7 @@ export const testimonials = [
     role: 'Plant Manager',
     company: 'Wipro Unza Vitalis Indonesia',
     rating: 5,
-    text: 'Lebih dari 500 karyawan shift kami bergantung pada RETABA setiap hari. Belum pernah ada insiden keamanan pangan — sertifikasi mereka bukan formalitas, terbukti di lapangan.',
+    text: 'Lebih dari 500 karyawan shift kami makan dari RETABA tiap hari. Belum pernah ada masalah keamanan pangan — sertifikasi mereka bukan cuma formalitas, terbukti di lapangan.',
     avatar: 'RP',
   },
 ];

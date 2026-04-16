@@ -48,7 +48,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-sm mb-8">
-              Jasa catering perusahaan bersertifikat Halal, SLHS, dan teruji lab untuk ketenangan dan kepuasan makan siang karyawan Anda.
+              Catering harian buat perusahaan dan pabrik. Halal MUI, SLHS, dan teruji lab. Mengantar ke Tangerang, Salatiga, dan Solo.
             </p>
             
             {/* Certifications */}

@@ -9,42 +9,50 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://retaba.co.id/gallery' },
 };
 
+const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
+
 const galleryImages = [
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144056/retaba/food-images/15.png',
     alt: 'Udang Balado RETABA',
     span: 'lg:col-span-2',
     label: 'Udang Balado',
+    ring: 'yellow',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165885/retaba/catering-photos/1.jpg',
     alt: 'Penyediaan Lunch Box RETABA',
     span: '',
     label: 'Lunch Box',
+    ring: 'teal',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144126/retaba/food-images/6.png',
     alt: 'Ayam Rendang RETABA',
     span: '',
     label: 'Ayam Rendang',
+    ring: 'green',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165886/retaba/catering-photos/2.jpg',
     alt: 'Persiapan Catering RETABA',
     span: 'lg:col-span-2',
     label: 'Persiapan Menu',
+    ring: 'yellow',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144080/retaba/food-images/3.png',
     alt: 'Chicken Katsu RETABA',
     span: '',
     label: 'Chicken Katsu',
+    ring: 'teal',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144102/retaba/food-images/43.png',
     alt: 'Tumis Buncis RETABA',
     span: '',
     label: 'Tumis Buncis',
+    ring: 'green',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144127/retaba/food-images/7.png',
@@ -52,96 +60,112 @@ const galleryImages = [
     span: 'lg:col-span-2 lg:row-span-2',
     label: 'Daging Rendang',
     tall: true,
+    ring: 'yellow',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165888/retaba/catering-photos/3.jpg',
     alt: 'Distribusi Catering RETABA',
     span: '',
     label: 'Distribusi',
+    ring: 'teal',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144069/retaba/food-images/23.png',
     alt: 'Gado-Gado RETABA',
     span: '',
     label: 'Gado-Gado',
+    ring: 'green',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165889/retaba/catering-photos/4.jpg',
     alt: 'Pengemasan Catering RETABA',
     span: '',
     label: 'Pengemasan',
+    ring: 'yellow',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144086/retaba/food-images/33.png',
     alt: 'Mie Goreng RETABA',
     span: '',
     label: 'Mie Goreng',
+    ring: 'teal',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165890/retaba/catering-photos/5.jpg',
     alt: 'Layanan Catering RETABA',
     span: 'lg:col-span-2',
     label: 'Layanan Kami',
+    ring: 'green',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144049/retaba/food-images/10.png',
     alt: 'Ayam Goreng RETABA',
     span: '',
     label: 'Ayam Goreng',
+    ring: 'yellow',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165891/retaba/catering-photos/6.jpg',
     alt: 'Operasional Catering RETABA',
     span: '',
     label: 'Operasional',
+    ring: 'teal',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144110/retaba/food-images/49.png',
     alt: 'Sop Baso RETABA',
     span: '',
     label: 'Sop Baso',
+    ring: 'green',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165892/retaba/catering-photos/7.jpg',
     alt: 'Catering Perusahaan RETABA',
     span: 'lg:col-span-2',
     label: 'Catering Perusahaan',
+    ring: 'yellow',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144071/retaba/food-images/24.png',
     alt: 'Kentang Balado RETABA',
     span: '',
     label: 'Kentang Balado',
+    ring: 'teal',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165893/retaba/catering-photos/8.jpg',
     alt: 'Pengantaran Catering RETABA',
     span: '',
     label: 'Pengantaran',
+    ring: 'green',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144116/retaba/food-images/52.png',
     alt: 'Tumis Capcay RETABA',
     span: '',
     label: 'Tumis Capcay',
+    ring: 'yellow',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165894/retaba/catering-photos/9.jpg',
     alt: 'Tim RETABA',
     span: '',
     label: 'Tim RETABA',
+    ring: 'teal',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144123/retaba/food-images/57.png',
     alt: 'Susu Segar RETABA',
     span: 'lg:col-span-2',
     label: 'Susu Segar',
+    ring: 'green',
   },
   {
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776165895/retaba/catering-photos/10.jpg',
     alt: 'Kegiatan Catering RETABA',
     span: '',
     label: 'Kegiatan Kami',
+    ring: 'yellow',
   },
 ];
 
@@ -152,10 +176,10 @@ export default function GalleryPage() {
       <section className="pt-28 pb-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-yellow/10 border border-yellow/20 rounded-full px-4 py-1.5 mb-4">
-            <span className="text-yellow text-sm font-medium">Galeri Foto</span>
+            <span className="text-green text-sm font-medium">Galeri Foto</span>
           </div>
           <h1 className="text-5xl sm:text-6xl font-black text-ink mb-6">
-            Lezat di Mata, <span className="text-yellow">Nikmat di Rasa</span>
+            Lezat di Mata, <span className="text-green">Nikmat di Rasa</span>
           </h1>
           <p className="text-ink/60 text-xl max-w-2xl mx-auto">
             Sekilas pandang aneka sajian dan layanan RETABA yang memanjakan selera.
@@ -163,45 +187,52 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Gallery Grid */}
-      <section className="py-12 bg-white pb-16">
+      {/* Gallery Grid — Vibrant redesign */}
+      <section className="py-16 bg-yellow/10 border-y border-yellow/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[200px]">
-            {galleryImages.map((img, i) => (
-              <div
-                key={i}
-                className={`relative overflow-hidden rounded-2xl group cursor-pointer ${img.span} ${img.tall ? 'row-span-2' : ''}`}
-              >
-                <Image
-                  src={getCloudinaryUrl(img.src, { width: img.span.includes('col-span-2') ? 1200 : 800, height: img.tall ? 800 : 600 })}
-                  alt={img.alt}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-white font-semibold text-sm bg-white/20 backdrop-blur-sm border border-white/30 px-3 py-1 rounded-full">
-                    {img.label}
-                  </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 auto-rows-[200px]">
+            {galleryImages.map((img, i) => {
+              const ringClass = img.ring === 'yellow' ? 'ring-yellow' : img.ring === 'teal' ? 'ring-teal' : 'ring-green';
+              return (
+                <div
+                  key={i}
+                  className={`relative overflow-hidden rounded-2xl group cursor-pointer ring-4 ${ringClass} hover:ring-offset-4 hover:ring-offset-yellow/10 transition-all duration-300 ${img.span} ${img.tall ? 'row-span-2' : ''}`}
+                >
+                  <Image
+                    src={getCloudinaryUrl(img.src, { width: img.span.includes('col-span-2') ? 1200 : 800, height: img.tall ? 800 : 600 })}
+                    alt={img.alt}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                    img.ring === 'yellow' ? 'bg-gradient-to-t from-yellow/80 via-transparent to-transparent'
+                    : img.ring === 'teal' ? 'bg-gradient-to-t from-teal/80 via-transparent to-transparent'
+                    : 'bg-gradient-to-t from-green/80 via-transparent to-transparent'
+                  }`} />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <span className="text-white font-bold text-sm bg-white/20 backdrop-blur-sm border border-white/30 px-3 py-1 rounded-full">
+                      {img.label}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-surface/80 border-t border-border">
+      <section className="py-16 bg-yellow">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-ink mb-4">
             Tertarik Menjadikan RETABA Mitra Catering Anda?
           </h2>
-          <p className="text-ink/60 mb-8 max-w-xl mx-auto">
+          <p className="text-ink/70 mb-8 max-w-xl mx-auto">
             Hubungi kami untuk mendapatkan jadwal menu lengkap, foto dokumentasi asli, dan penawaran harga sesuai kebutuhan perusahaan Anda.
           </p>
           <a
-            href="https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda."
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-2xl font-bold text-base transition-all hover:shadow-2xl hover:shadow-green/30 hover:-translate-y-1"

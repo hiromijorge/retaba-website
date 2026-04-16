@@ -15,32 +15,30 @@ const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingi
 const values = [
   {
     title: 'Kualitas Tanpa Kompromi',
-    description: 'Setiap bahan dipilih dengan teliti, diproses secara higienis, dan telah melalui uji laboratorium keamanan pangan.',
+    description: 'Bahan segar, proses bersih, dan hasil uji lab rutin. Kami nggak main-main soal keamanan pangan.',
     icon: '⭐',
     image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776156297/retaba/about/cooking.jpg',
   },
   {
-    title: 'Halal & Terpercaya',
-    description: 'Bersertifikat Halal MUI resmi (No. ID33110014801751123) dan SLHS untuk memastikan ketenangan seluruh pelanggan.',
+    title: 'Halal & Bisa Dicek',
+    description: 'Sertifikat Halal MUI (No. ID33110014801751123) dan SLHS resmi. Bukan cuma pajangan, tapi bisa diverifikasi langsung.',
     icon: '☪',
     image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png',
     isLogo: true,
   },
   {
     title: 'Fleksibel & Responsif',
-    description: 'Menu dan paket disesuaikan dengan kebutuhan dan anggaran perusahaan Anda. Tim kami mudah dihubungi dan cepat merespons perubahan mendadak.',
+    description: 'Menu dan paket bisa disesuaikan anggaran. Ada perubahan mendadak? Tim kami siap diajak koordinasi cepat.',
     icon: '⚡',
     image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776156298/retaba/about/kitchen.jpg',
   },
   {
     title: 'Kemitraan Jangka Panjang',
-    description: 'Kami membangun hubungan yang saling menguntungkan dan jangka panjang dengan setiap klien kami.',
+    description: 'Kami percaya bisnis yang baik itu dibangun dari kepercayaan. Makanya klien kami banyak yang perpanjang kontrak bertahun-tahun.',
     icon: '🤝',
     image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776156299/retaba/about/handshake.jpg',
   },
 ];
-
-
 
 export default function AboutPage() {
   return (
@@ -65,7 +63,7 @@ export default function AboutPage() {
             Kami adalah <span className="text-brand">RETABA</span>
           </h1>
           <p className="text-white/70 text-xl max-w-2xl">
-            PT. Receh Tapi Banyak — mitra catering terpercaya untuk perusahaan Anda.
+            PT. Receh Tapi Banyak — mitra catering harian buat perusahaan dan pabrik di Jawa Tengah dan Banten.
           </p>
         </div>
       </section>
@@ -80,23 +78,20 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-ink/60 leading-relaxed">
                 <p>
-                  RETABA lahir dari keinginan sederhana: menyediakan makanan berkualitas, halal, dan terjangkau
-                  untuk para pekerja di industri. Kami percaya bahwa makan siang yang baik adalah hak setiap karyawan.
+                  RETABA berawal dari ide sederhana: karyawan pabrik juga pantas makan siang yang enak, halal, dan aman.
+                  Bukan makanan sembarangan, tapi yang benar-benar diperhatikan dari dapurnya.
                 </p>
                 <p>
-                  Berdiri pada tahun 2023 di Jawa Tengah, RETABA (singkatan dari PT. Receh Tapi Banyak) memulai
-                  perjalanannya dengan melayani beberapa perusahaan lokal. Dengan komitmen pada kualitas dan
-                  kepercayaan, kami berhasil mendapatkan sertifikasi Halal MUI dan SLHS di tahun yang sama.
+                  Berdiri tahun 2023 di Jawa Tengah, kami mulai dari melayani beberapa perusahaan lokal.
+                  Dalam waktu singkat, kami dapat sertifikasi Halal MUI dan SLHS — bukti bahwa kami serius soal standar.
                 </p>
                 <p>
-                  Kini RETABA telah melayani lebih dari 20 perusahaan aktif termasuk PT Indofood Sukses Makmur,
-                  PT Wipro Unza Vitalis Indonesia, PT Konimex, dan perusahaan-perusahaan lainnya. Kami
-                  beroperasi di empat kota: Tangerang, Semarang, Salatiga, dan Solo.
+                  Sekarang RETABA sudah menangani lebih dari 20 perusahaan aktif, mulai dari Indofood, Wipro Unza,
+                  Konimex, sampai Graphic Packaging. Operasional kami jalan di Tangerang, Semarang, Salatiga, dan Solo.
                 </p>
                 <p>
-                  Yang membedakan kami adalah komitmen pada kualitas yang dapat diverifikasi — bukan sekadar
-                  klaim. Halal MUI bersertifikat resmi, SLHS dari pemerintah, dan uji laboratorium pangan
-                  independen menjadi standar operasional kami setiap hari.
+                  Apa yang buat kami beda? Semua klaim kami bisa dibuktikan. Sertifikat Halal bisa dicek,
+                  SLHS resmi dari pemerintah, dan uji lab independen kami lakukan secara rutin.
                 </p>
               </div>
             </div>
@@ -134,7 +129,7 @@ export default function AboutPage() {
               Keunggulan <span className="text-green">Kami</span>
             </h2>
             <p className="text-ink/50 max-w-xl mx-auto">
-              Prinsip-prinsip yang menjadi fondasi operasional dan pelayanan RETABA setiap harinya.
+              Prinsip yang kami pegang teguh setiap hari, dari dapur sampai pengiriman.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -168,10 +163,10 @@ export default function AboutPage() {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black text-ink mb-4">
-            Hubungi Kami
+            Tertarik Bekerja Sama?
           </h2>
           <p className="text-ink/60 mb-8">
-            Jadilah bagian dari keluarga besar klien RETABA dan rasakan perbedaan kualitas catering kami.
+            Mari ngobrol dulu. Kami akan dengarkan kebutuhan perusahaan Anda dan kasih penawaran yang cocok.
           </p>
           <a
             href={WA_LINK}
@@ -179,7 +174,7 @@ export default function AboutPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-green/30"
           >
-            Minta Penawaran via WhatsApp
+            Chat WhatsApp Sekarang
           </a>
         </div>
       </section>

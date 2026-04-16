@@ -65,19 +65,17 @@ export default function HomePage() {
       {/* Trust Badges */}
       <TrustBadges />
 
-      {/* Certifications — moved up: first thing B2B procurement checks */}
+      {/* Certifications */}
       <section id="sertifikasi" className="py-14 lg:py-16 bg-surface/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Stat-led header — big number anchors the section */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 lg:mb-12">
             <div>
               <span className="text-[72px] sm:text-[88px] font-black text-green leading-none">2</span>
               <p className="text-ink font-black text-2xl sm:text-3xl mt-1">Sertifikasi Resmi</p>
               <p className="text-ink/50 text-sm mt-2 max-w-sm">
-                Dapat diverifikasi secara independen — bukan sekadar klaim di brosur.
+                Bisa dicek langsung. Bukan pajangan di dinding.
               </p>
             </div>
-
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -86,14 +84,14 @@ export default function HomePage() {
                 title: 'Halal MUI',
                 number: 'No. ID33110014801751123',
                 image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png',
-                desc: 'Sertifikasi Halal resmi dari Majelis Ulama Indonesia — dapat diverifikasi online',
+                desc: 'Sertifikat Halal resmi dari Majelis Ulama Indonesia. Nomor bisa diverifikasi langsung di website MUI.',
                 color: 'yellow',
               },
               {
                 title: 'SLHS',
                 number: 'Sertifikat Laik Higiene Sanitasi',
                 image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/1.png',
-                desc: 'Memenuhi standar higiene dan sanitasi pangan nasional dari pemerintah',
+                desc: 'Lolos pemeriksaan higiene dan sanitasi pangan dari pemerintah. Dapur kami diperiksa berkala.',
                 color: 'teal',
               },
             ].map((cert) => (
@@ -128,17 +126,16 @@ export default function HomePage() {
       {/* Why Us */}
       <WhyUsSection />
 
-      {/* Menu Preview — single entry point */}
+      {/* Menu Preview */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Left-aligned editorial header — breaks center pattern */}
           <div className="mb-10 lg:mb-14">
             <p className="text-green font-bold text-sm uppercase tracking-widest mb-3">100+ Pilihan</p>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-ink leading-tight">
               Menu dari 6<br />ragam cita rasa.
             </h2>
             <p className="text-ink/50 mt-4 text-lg max-w-lg">
-              Nusantara, Jepang, Korea, India, China, dan menu kustom — jadwal berganti tiap minggu.
+              Nusantara, Jepang, Korea, India, China, dan menu kustom. Tiap minggu bergilir — karyawan nggak akan bosan.
             </p>
           </div>
           <MenuGrid preview />
@@ -178,7 +175,7 @@ export default function HomePage() {
       {/* Testimonials */}
       <TestimonialSlider />
 
-      {/* CTA Banner — single primary action + price anchor */}
+      {/* CTA Banner */}
       <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand/5 via-transparent to-teal/5" />
 
@@ -191,16 +188,15 @@ export default function HomePage() {
 
           {/* Price anchor */}
           <div className="inline-flex items-center gap-3 bg-brand/20 border border-brand/40 rounded-2xl px-6 py-3 mb-6">
-            <span className="text-ink font-bold text-sm">Paket Catering Corporate harian</span>
+            <span className="text-ink font-bold text-sm">Paket Catering Corporate Harian</span>
             <span className="text-ink/30">·</span>
             <span className="text-green font-black text-sm">
-              {/* TODO: ganti dengan harga aktual Anda */}
-              Hubungi kami untuk penawaran harga
+              Harga disesuaikan kebutuhan
             </span>
           </div>
 
           <p className="text-ink/60 text-lg mb-10 max-w-2xl mx-auto">
-            Respon dalam 1×24 jam. Penawaran disesuaikan dengan jumlah karyawan dan lokasi perusahaan Anda.
+            Kirim pesan sekarang. Kami akan balas dalam 1×24 jam dengan penawaran yang pas buat jumlah karyawan dan lokasi perusahaan Anda.
           </p>
 
           <a

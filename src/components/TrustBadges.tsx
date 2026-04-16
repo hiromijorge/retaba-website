@@ -10,19 +10,19 @@ const badges = [
     type: 'logo',
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png',
     title: 'Halal MUI',
-    subtitle: 'ID33110014801751123',
+    subtitle: 'No. ID33110014801751123',
   },
   {
     type: 'logo',
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/1.png',
-    title: 'SLHS Certified',
+    title: 'SLHS',
     subtitle: 'Sertifikat Laik Higiene',
   },
   {
     type: 'icon',
     icon: '🔬',
     title: 'Lab Tested',
-    subtitle: 'Teruji Keamanan Pangan',
+    subtitle: 'Uji Keamanan Pangan',
   },
   {
     type: 'icon',
