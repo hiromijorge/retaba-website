@@ -35,7 +35,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-4 mb-6 group">
               <div className="relative w-20 h-20 rounded-xl bg-white p-2">
                 <Image
-                  src="/logo/retaba-logo-transparent.png"
+                  src="/logo/retaba-logo-icon-color.svg"
                   alt="RETABA Logo"
                   fill
                   className="object-contain"
@@ -54,10 +54,10 @@ export default function Footer() {
             {/* Certifications */}
             <div className="flex flex-wrap gap-3">
               <div className="bg-white rounded-xl w-20 h-14 flex items-center justify-center">
-                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/1.png" alt="Halal MUI" width={64} height={40} className="max-h-10 w-auto object-contain px-1" />
+                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png" alt="Halal MUI" width={64} height={40} className="max-h-10 w-auto object-contain px-1" />
               </div>
               <div className="bg-white rounded-xl w-20 h-14 flex items-center justify-center">
-                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/2.png" alt="SLHS" width={56} height={36} className="max-h-9 w-auto object-contain px-2" />
+                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/1.png" alt="SLHS" width={56} height={36} className="max-h-9 w-auto object-contain px-2" />
               </div>
               <div className="bg-white/10 rounded-xl w-20 h-14 flex flex-col items-center justify-center border border-white/20 text-center">
                 <div className="text-sm font-black text-white">LAB</div>

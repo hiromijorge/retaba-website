@@ -115,12 +115,13 @@ export default function ClientsPage() {
                   &ldquo;{t.text}&rdquo;
                 </blockquote>
                 <div className="flex items-center gap-3 mt-6 pt-4 border-t border-border">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand/30 to-green/30 flex items-center justify-center">
-                    <span className="text-ink font-bold text-sm">{t.avatar}</span>
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green to-teal flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/>
+                    </svg>
                   </div>
                   <div>
-                    <div className="text-ink text-sm font-semibold">{t.name}</div>
-                    <div className="text-ink/40 text-xs">{t.role} · {t.company}</div>
+                    <div className="text-ink text-sm font-semibold">{t.company}</div>
                   </div>
                 </div>
               </article>

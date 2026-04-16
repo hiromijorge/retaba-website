@@ -8,13 +8,13 @@ import Image from 'next/image';
 const badges = [
   {
     type: 'logo',
-    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/1.png',
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png',
     title: 'Halal MUI',
     subtitle: 'ID33110014801751123',
   },
   {
     type: 'logo',
-    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/2.png',
+    src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/1.png',
     title: 'SLHS Certified',
     subtitle: 'Sertifikat Laik Higiene',
   },

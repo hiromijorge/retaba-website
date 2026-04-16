@@ -35,10 +35,10 @@ export default function HeroSection() {
               className="flex gap-4 mb-8"
             >
               <div className="bg-white rounded-xl px-4 py-3 flex items-center justify-center shadow-sm w-28 h-16">
-                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/2.png" alt="SLHS Certified" width={80} height={40} className="object-contain max-h-10 w-auto" />
+                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/1.png" alt="SLHS Certified" width={80} height={40} className="object-contain max-h-10 w-auto" />
               </div>
               <div className="bg-white rounded-xl px-4 py-3 flex items-center justify-center shadow-sm w-28 h-16">
-                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/1.png" alt="Halal MUI" width={90} height={45} className="object-contain max-h-12 w-auto" />
+                <Image src="https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png" alt="Halal MUI" width={90} height={45} className="object-contain max-h-12 w-auto" />
               </div>
               <div className="bg-white rounded-xl px-4 py-3 flex items-center gap-2 shadow-sm">
                 <span className="text-green font-black text-sm">🔬 LAB</span>

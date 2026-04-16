@@ -42,16 +42,6 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 lg:h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-4 group">
-          <div className="relative w-24 h-24">
-            <Image
-              src="/logo/retaba-logo-transparent.png"
-              alt="RETABA Logo"
-              fill
-              className="object-contain"
-              sizes="96px"
-              priority
-            />
-          </div>
           <div className="flex flex-col leading-none">
             <span className="font-black text-green text-2xl tracking-tight group-hover:text-teal transition-colors">
               RETABA

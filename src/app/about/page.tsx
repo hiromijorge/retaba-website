@@ -23,7 +23,7 @@ const values = [
     title: 'Halal & Terpercaya',
     description: 'Bersertifikat Halal MUI resmi (No. ID33110014801751123) dan SLHS untuk memastikan ketenangan seluruh pelanggan.',
     icon: '☪',
-    image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/1.png',
+    image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png',
     isLogo: true,
   },
   {
@@ -115,7 +115,7 @@ export default function AboutPage() {
                 <div className="text-xs font-bold opacity-70 mb-1 uppercase tracking-widest">Halal MUI</div>
                 <div className="text-2xl font-black leading-none flex items-center gap-3">
                   <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center p-1 relative overflow-hidden">
-                    <Image src={getCloudinaryUrl('https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/1.png', { width: 200 })} alt="Halal MUI" fill className="object-contain p-0.5" />
+                    <Image src={getCloudinaryUrl('https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png', { width: 200 })} alt="Halal MUI" fill className="object-contain p-0.5" />
                   </div>
                   Tersertifikasi
                 </div>

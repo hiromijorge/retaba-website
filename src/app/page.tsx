@@ -85,14 +85,14 @@ export default function HomePage() {
               {
                 title: 'Halal MUI',
                 number: 'No. ID33110014801751123',
-                image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/1.png',
+                image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png',
                 desc: 'Sertifikasi Halal resmi dari Majelis Ulama Indonesia — dapat diverifikasi online',
                 color: 'yellow',
               },
               {
                 title: 'SLHS',
                 number: 'Sertifikat Laik Higiene Sanitasi',
-                image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/2.png',
+                image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144132/retaba/certification-images/1.png',
                 desc: 'Memenuhi standar higiene dan sanitasi pangan nasional dari pemerintah',
                 color: 'teal',
               },

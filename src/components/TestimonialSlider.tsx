@@ -67,12 +67,13 @@ export default function TestimonialSlider() {
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-green to-teal flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">{testimonial.avatar}</span>
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green to-teal flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/>
+                  </svg>
                 </div>
                 <div>
-                  <div className="text-ink font-bold text-lg">{testimonial.name}</div>
-                  <div className="text-ink/50">{testimonial.role} · {testimonial.company}</div>
+                  <div className="text-ink font-bold text-lg">{testimonial.company}</div>
                 </div>
               </div>
             </motion.div>
