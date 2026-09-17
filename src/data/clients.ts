@@ -56,6 +56,46 @@ export const clients: Client[] = [
     logo: '/customer-logo/frontone-hotel.png',
     color: '#F7D200',
   },
+  {
+    id: 7,
+    name: 'PT Putra Kemas Makmur',
+    shortName: 'Putra Kemas Makmur',
+    industry: 'Packaging',
+    logo: '/customer-logo/putra-kemas-makmur.png',
+    color: '#E53030',
+  },
+  {
+    id: 8,
+    name: 'PT Erela',
+    shortName: 'Erela',
+    industry: 'Pharmaceutical',
+    logo: '/customer-logo/erela.png',
+    color: '#3F9B3F',
+  },
+  {
+    id: 9,
+    name: 'LPK Mutiara',
+    shortName: 'LPK Mutiara',
+    industry: 'Education & Training',
+    logo: '/customer-logo/lpk-mutiara.png',
+    color: '#3F9B3F',
+  },
+  {
+    id: 10,
+    name: 'Nada Surya Tunggal',
+    shortName: 'Nada Surya Tunggal',
+    industry: 'Manufacturing',
+    logo: '/customer-logo/nada-surya-tunggal.png',
+    color: '#E53030',
+  },
+  {
+    id: 11,
+    name: 'FMC Bina Guna Kimia',
+    shortName: 'FMC Bina Guna Kimia',
+    industry: 'Chemical',
+    logo: '/customer-logo/fmc-bina-guna-kimia.png',
+    color: '#3F9B3F',
+  },
 ];
 
 export const testimonials = [
