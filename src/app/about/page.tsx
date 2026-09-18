@@ -2,15 +2,15 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
+import { WA_LINK, COMPANY } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Tentang Kami',
   description:
-    'Kenali RETABA (PT. Receh Tapi Banyak) — perusahaan catering bersertifikat Halal yang berdiri sejak 2023, melayani perusahaan di Tangerang, Salatiga, dan Solo.',
-  alternates: { canonical: 'https://retaba.co.id/about' },
+    'Kenali RETABA (PT. Receh Tapi Banyak) — perusahaan catering bersertifikat Halal yang berdiri sejak 2023, melayani perusahaan di Tangerang, Semarang, Salatiga, dan Solo.',
+  alternates: { canonical: '/about' },
 };
 
-const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
 
 const values = [
   {
@@ -21,7 +21,7 @@ const values = [
   },
   {
     title: 'Halal & Bisa Dicek',
-    description: 'Sertifikat Halal MUI (No. ID33110014801751123) dan SLHS resmi. Bukan cuma pajangan, tapi bisa diverifikasi langsung.',
+    description: `Sertifikat Halal MUI (No. ${COMPANY.halalCertNo}) dan SLHS resmi. Bukan cuma pajangan, tapi bisa diverifikasi langsung.`,
     icon: '☪',
     image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png',
     isLogo: true,
@@ -42,7 +42,7 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <main>
+    <main id="main">
       {/* Hero */}
       <section className="relative min-h-[45vh] flex items-end pb-12 overflow-hidden bg-white pt-20">
         <div className="absolute inset-0">
@@ -128,7 +128,7 @@ export default function AboutPage() {
             <h2 className="text-4xl font-black text-ink mb-4">
               Keunggulan <span className="text-green">Kami</span>
             </h2>
-            <p className="text-ink/50 max-w-xl mx-auto">
+            <p className="text-ink/60 max-w-xl mx-auto">
               Prinsip yang kami pegang teguh setiap hari, dari dapur sampai pengiriman.
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function AboutPage() {
                   )}
                 </div>
                 <h3 className="text-ink font-bold mb-3">{value.title}</h3>
-                <p className="text-ink/50 text-sm leading-relaxed">{value.description}</p>
+                <p className="text-ink/60 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>

@@ -11,6 +11,17 @@
     scroll-behavior: smooth;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  :focus-visible {
+    outline: 3px solid #087A68;
+    outline-offset: 2px;
+  }
+
   body {
     background-color: #FFFFFF;
     color: #1A1A1A;
@@ -47,6 +58,16 @@
   animation: marquee-left 60s linear infinite;
 }
 
-.marquee-pause:hover .marquee-track {
+.marquee-pause:hover .marquee-track,
+.marquee-pause:focus-within .marquee-track {
   animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .animate-pulse {
+    animation: none;
+  }
 }

@@ -1,26 +1,26 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { clients, testimonials } from '@/data/clients';
+import { WA_LINK } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Klien Kami',
   description:
     'Klien-klien terpercaya RETABA termasuk PT Indofood Sukses Makmur, PT Wipro Unza Vitalis, PT Konimex, dan perusahaan besar lainnya.',
-  alternates: { canonical: 'https://retaba.co.id/clients' },
+  alternates: { canonical: '/clients' },
 };
 
-const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
 
 const stats = [
   { value: '20+', label: 'Perusahaan Klien', color: 'yellow' as const },
-  { value: '3', label: 'Kota Layanan', color: 'teal' as const },
+  { value: '4', label: 'Kota Layanan', color: 'teal' as const },
   { value: '5.000+', label: 'Porsi Per Hari', color: 'green' as const },
   { value: '100+', label: 'Variasi Menu', color: 'yellow' as const },
 ];
 
 export default function ClientsPage() {
   return (
-    <main>
+    <main id="main">
       {/* Hero */}
       <section className="pt-28 pb-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -43,7 +43,7 @@ export default function ClientsPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat) => {
               const bgClass = stat.color === 'yellow' ? 'bg-yellow/30 border-yellow' : stat.color === 'teal' ? 'bg-teal/30 border-teal' : 'bg-green/30 border-green';
-              const textClass = stat.color === 'yellow' ? 'text-yellow' : stat.color === 'teal' ? 'text-teal' : 'text-green';
+              const textClass = stat.color === 'yellow' ? 'text-ink' : stat.color === 'teal' ? 'text-teal' : 'text-green';
               return (
                 <div key={stat.label} className={`text-center p-6 rounded-2xl border-2 ${bgClass} hover:-translate-y-1 transition-transform`}>
                   <div className={`text-4xl font-black mb-1 ${textClass}`}>{stat.value}</div>
@@ -80,16 +80,8 @@ export default function ClientsPage() {
                   </div>
                   <div>
                     <h3 className="text-ink font-bold leading-tight">{client.name}</h3>
-                    <div className="text-ink/40 text-sm mt-1">{client.industry}</div>
+                    <div className="text-ink/60 text-sm mt-1">{client.industry}</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-1 mt-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-yellow" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                  <span className="text-ink/40 text-xs ml-1 font-medium">Klien Aktif</span>
                 </div>
               </article>
             ))}
@@ -108,9 +100,9 @@ export default function ClientsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <article key={t.id} className="p-8 rounded-[2rem] bg-white border-2 border-green shadow-lg shadow-green/10 flex flex-col hover:-translate-y-1 transition-transform">
-                <div className="flex gap-1 mb-5">
+                <div className="flex gap-1 mb-5" role="img" aria-label={`${t.rating} dari 5 bintang`}>
                   {Array.from({ length: t.rating }).map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={i} className="w-5 h-5 text-yellow" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}

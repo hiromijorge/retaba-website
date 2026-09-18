@@ -69,7 +69,7 @@ export default function ServiceCard({ icon, title, description, features, color,
         <p className={`text-sm leading-relaxed mb-6 ${c.desc}`}>{description}</p>
 
         <ul className="space-y-2.5">
-          {features.slice(0, 5).map((feature) => (
+          {features.map((feature) => (
             <li key={feature} className="flex items-start gap-3">
               <span className={`w-1.5 h-1.5 rounded-full mt-2 shrink-0 ${c.bullet}`} />
               <span className={`text-sm leading-snug ${c.featureText}`}>{feature}</span>

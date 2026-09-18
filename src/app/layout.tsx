@@ -4,6 +4,10 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import MotionProvider from '@/components/MotionProvider';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SITE_URL, SERVICE_AREAS_TEXT } from '@/lib/site';
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -12,16 +16,14 @@ const nunito = Nunito({
   display: 'swap',
 });
 
-const siteUrl = 'https://retaba.co.id';
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'RETABA Catering - Jasa Catering Bersertifikat Halal',
     template: '%s | RETABA Catering - Jasa Catering Bersertifikat Halal',
   },
   description:
-    'RETABA (PT. Receh Tapi Banyak) — Jasa catering perusahaan bersertifikat Halal MUI, SLHS, dan teruji lab. Melayani catering kantor halal di Tangerang, Salatiga, dan Solo. Menu bervariasi, harga kompetitif.',
+    `RETABA (PT. Receh Tapi Banyak) — Jasa catering perusahaan bersertifikat Halal MUI, SLHS, dan teruji lab. Melayani catering kantor halal di ${SERVICE_AREAS_TEXT}. Menu bervariasi, harga kompetitif.`,
   keywords: [
     'jasa catering perusahaan',
     'catering kantor halal',
@@ -40,26 +42,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'id_ID',
-    url: siteUrl,
+    url: SITE_URL,
     siteName: 'RETABA Catering',
     title: 'RETABA Catering - Jasa Catering Bersertifikat Halal',
     description:
-      'Catering perusahaan berkualitas, bersertifikat Halal MUI & SLHS, teruji lab. Melayani Tangerang, Salatiga, Solo.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'RETABA Catering - Jasa Catering Halal Bersertifikat',
-      },
-    ],
+      `Catering perusahaan berkualitas, bersertifikat Halal MUI & SLHS, teruji lab. Melayani ${SERVICE_AREAS_TEXT}.`,
   },
   twitter: {
     card: 'summary_large_image',
     title: 'RETABA Catering - Jasa Catering Bersertifikat Halal',
     description:
-      'Catering perusahaan berkualitas, bersertifikat Halal MUI & SLHS. Tangerang, Salatiga, Solo.',
-    images: ['/og-image.jpg'],
+      `Catering perusahaan berkualitas, bersertifikat Halal MUI & SLHS. ${SERVICE_AREAS_TEXT}.`,
+  },
+  manifest: '/site.webmanifest',
+  icons: {
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   robots: {
     index: true,
@@ -82,10 +83,20 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${nunito.variable} scroll-smooth`}>
       <body className={`${nunito.className} bg-white text-ink antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
-        <FloatingWhatsApp />
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-green focus:px-4 focus:py-2 focus:text-white focus:font-bold"
+        >
+          Langsung ke konten
+        </a>
+        <MotionProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <FloatingWhatsApp />
+        </MotionProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -4,13 +4,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
+import { COMPANY } from '@/lib/site';
 
 const badges = [
   {
     type: 'logo',
     src: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png',
     title: 'Halal MUI',
-    subtitle: 'No. ID33110014801751123',
+    subtitle: `No. ${COMPANY.halalCertNo}`,
   },
   {
     type: 'logo',
@@ -59,13 +60,13 @@ export default function TrustBadges() {
                   />
                 </div>
               ) : (
-                <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl flex-shrink-0 bg-white/10">
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl flex-shrink-0 bg-white/10" aria-hidden="true">
                   {badge.icon}
                 </div>
               )}
               <div>
                 <div className="font-bold text-white text-sm">{badge.title}</div>
-                <div className="text-white/60 text-xs">{badge.subtitle}</div>
+                <div className="text-white/90 text-xs">{badge.subtitle}</div>
               </div>
             </motion.div>
           ))}

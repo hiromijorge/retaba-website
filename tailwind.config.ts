@@ -1,11 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
@@ -19,15 +15,9 @@ const config: Config = {
         muted:   '#6B7280',   // secondary text
         surface: '#F5F5F5',   // light section background
         border:  '#E5E5E5',   // neutral border
-        // ─── Legacy aliases kept for compatibility ────────────────────
-        cream:      '#FFFFFF',
-        sand:       '#F5F5F5',
-        parchment:  '#E5E5E5',
-        espresso:   '#1A1A1A',
-        mocha:      '#6B7280',
-        amber:      '#F7D200',
-        forest:     '#087A68',
-        yellow:     '#F7D200',
+        // ─── Aliases still used in components ─────────────────────────
+        espresso:   '#1A1A1A',   // = ink (used in image overlays)
+        yellow:     '#F7D200',   // = brand
       },
       fontFamily: {
         sans:    ['var(--font-nunito)', 'system-ui', 'sans-serif'],

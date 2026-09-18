@@ -8,51 +8,45 @@ import MenuGrid from '@/components/MenuGrid';
 import ClientLogos from '@/components/ClientLogos';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
+import { WA_LINK, SITE_URL, PHONE_E164, EMAIL, COMPANY, SERVICE_AREAS, SERVICE_AREAS_TEXT } from '@/lib/site';
 
-const siteUrl = 'https://retaba.co.id';
-const WA_LINK = 'https://wa.me/6208887888808?text=Halo%20RETABA%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20catering%20Anda.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'RETABA - PT. Receh Tapi Banyak',
-  description: 'Jasa catering perusahaan bersertifikat Halal MUI, SLHS, dan teruji lab di Tangerang, Salatiga, Solo',
-  url: siteUrl,
-  telephone: '+6208887888808',
-  email: 'info@retaba.co.id',
-  foundingDate: '2023',
+  name: `${COMPANY.brand} - ${COMPANY.legalName}`,
+  legalName: COMPANY.legalName,
+  description: `Jasa catering perusahaan bersertifikat Halal MUI, SLHS, dan teruji lab di ${SERVICE_AREAS_TEXT}`,
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo/retaba-logo.png`,
+  image: `${SITE_URL}/opengraph-image`,
+  telephone: `+${PHONE_E164}`,
+  email: EMAIL,
+  foundingDate: COMPANY.foundingYear,
   servesCuisine: ['Indonesian', 'Japanese', 'Chinese', 'Korean', 'Indian'],
-  areaServed: ['Tangerang', 'Semarang', 'Salatiga', 'Solo'],
-  address: [
-    {
-      '@type': 'PostalAddress',
-      addressLocality: 'Tangerang',
-      addressRegion: 'Banten',
-      addressCountry: 'ID',
-    },
-    {
-      '@type': 'PostalAddress',
-      addressLocality: 'Salatiga',
-      addressRegion: 'Jawa Tengah',
-      addressCountry: 'ID',
-    },
-  ],
+  areaServed: SERVICE_AREAS.map((a) => ({ '@type': 'City', name: a.city })),
+  address: SERVICE_AREAS.map((a) => ({
+    '@type': 'PostalAddress',
+    addressLocality: a.city,
+    addressRegion: a.province,
+    addressCountry: 'ID',
+  })),
   hasCredential: [
-    { '@type': 'EducationalOccupationalCredential', name: 'Sertifikasi Halal MUI', credentialCategory: 'Halal Certification', identifier: 'ID33110014801751123' },
+    { '@type': 'EducationalOccupationalCredential', name: 'Sertifikasi Halal MUI', credentialCategory: 'Halal Certification', identifier: COMPANY.halalCertNo },
     { '@type': 'EducationalOccupationalCredential', name: 'SLHS - Sertifikat Laik Higiene Sanitasi' },
   ],
-  sameAs: [`https://wa.me/6208887888808`],
 };
 
 export const metadata: Metadata = {
   title: 'Beranda',
-  description: 'RETABA — Jasa catering perusahaan terpercaya, bersertifikat Halal MUI & SLHS, teruji lab. Menu bervariasi untuk karyawan Anda di Tangerang, Salatiga, dan Solo.',
-  alternates: { canonical: siteUrl },
+  description: `RETABA — Jasa catering perusahaan terpercaya, bersertifikat Halal MUI & SLHS, teruji lab. Menu bervariasi untuk karyawan Anda di ${SERVICE_AREAS_TEXT}.`,
+  alternates: { canonical: '/' },
 };
 
 export default function HomePage() {
   return (
-    <main>
+    <main id="main">
       {/* JSON-LD */}
       <script
         type="application/ld+json"
@@ -72,7 +66,7 @@ export default function HomePage() {
             <div>
               <span className="text-[72px] sm:text-[88px] font-black text-green leading-none">2</span>
               <p className="text-ink font-black text-2xl sm:text-3xl mt-1">Sertifikasi Resmi</p>
-              <p className="text-ink/50 text-sm mt-2 max-w-sm">
+              <p className="text-ink/60 text-sm mt-2 max-w-sm">
                 Bisa dicek langsung. Bukan pajangan di dinding.
               </p>
             </div>
@@ -82,7 +76,7 @@ export default function HomePage() {
             {[
               {
                 title: 'Halal MUI',
-                number: 'No. ID33110014801751123',
+                number: `No. ${COMPANY.halalCertNo}`,
                 image: 'https://res.cloudinary.com/dr62jpnos/image/upload/v1776144131/retaba/certification-images/2.png',
                 desc: 'Sertifikat Halal resmi dari Majelis Ulama Indonesia. Nomor bisa diverifikasi langsung di website MUI.',
                 color: 'yellow',
@@ -115,7 +109,7 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="font-black text-2xl mb-2 text-ink">{cert.title}</div>
-                <div className="text-ink/50 text-xs mb-4 font-mono">{cert.number}</div>
+                <div className="text-ink/60 text-xs mb-4 font-mono">{cert.number}</div>
                 <p className="text-ink/60 text-sm">{cert.desc}</p>
               </div>
             ))}
@@ -134,7 +128,7 @@ export default function HomePage() {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-ink leading-tight">
               Menu dari 6<br />ragam cita rasa.
             </h2>
-            <p className="text-ink/50 mt-4 text-lg max-w-lg">
+            <p className="text-ink/60 mt-4 text-lg max-w-lg">
               Nusantara, Jepang, Korea, India, China, dan menu kustom. Tiap minggu bergilir — karyawan nggak akan bosan.
             </p>
           </div>
@@ -157,16 +151,16 @@ export default function HomePage() {
       <section className="py-6 bg-ink">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
-            <span className="text-white/50 text-xs uppercase tracking-widest font-bold">Our Review</span>
+            <span className="text-white/70 text-xs uppercase tracking-widest font-bold">Our Review</span>
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
               <span className="text-white font-bold text-sm">ShantyDenny</span>
-              <span className="text-white/40 text-xs">3,38 juta subscriber</span>
-              <span className="text-white/30 hidden sm:inline">·</span>
+              <span className="text-white/70 text-xs">3,38 juta subscriber</span>
+              <span className="text-white/70 hidden sm:inline">·</span>
               <span className="text-white font-bold text-sm">EnjoyAja</span>
-              <span className="text-white/40 text-xs">444 rb subscriber</span>
-              <span className="text-white/30 hidden sm:inline">·</span>
+              <span className="text-white/70 text-xs">444 rb subscriber</span>
+              <span className="text-white/70 hidden sm:inline">·</span>
               <span className="text-white font-bold text-sm">Street Foods Village</span>
-              <span className="text-white/40 text-xs">938 rb subscriber</span>
+              <span className="text-white/70 text-xs">938 rb subscriber</span>
             </div>
           </div>
         </div>
@@ -205,16 +199,14 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 bg-green hover:bg-green/90 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all hover:shadow-2xl hover:shadow-green/30 hover:-translate-y-1"
           >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
+            <WhatsAppIcon className="w-6 h-6" />
             Minta Penawaran via WhatsApp
           </a>
 
           <p className="mt-4 text-ink/60 text-base">
             Atau kirim email ke{' '}
-            <a href="mailto:info@retaba.co.id" className="text-green hover:underline font-semibold">
-              info@retaba.co.id
+            <a href={`mailto:${EMAIL}`} className="text-green hover:underline font-semibold">
+              {EMAIL}
             </a>
           </p>
         </div>
