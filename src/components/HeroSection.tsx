@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
 import Link from 'next/link';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { WA_LINK } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 export default function HeroSection() {
   return (
@@ -72,15 +72,13 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 mb-10"
             >
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                cta="hero"
                 className="inline-flex items-center justify-center gap-3 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-2xl font-extrabold text-base transition-all hover:shadow-xl hover:shadow-green/30 hover:-translate-y-1"
               >
                 <WhatsAppIcon className="w-5 h-5" />
                 Chat WhatsApp untuk Penawaran
-              </a>
+              </WhatsAppLink>
               <Link
                 href="/menu"
                 className="inline-flex items-center justify-center gap-2 text-ink/80 hover:text-green font-bold text-base transition-colors"

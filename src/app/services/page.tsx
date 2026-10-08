@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ServiceCard from '@/components/ServiceCard';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { WA_LINK } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 export const metadata: Metadata = {
   title: 'Layanan',
@@ -199,10 +199,8 @@ export default function ServicesPage() {
                     ))}
                   </ul>
 
-                  <a
-                    href={WA_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <WhatsAppLink
+                    cta={`package_${pkg.name}`}
                     className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold transition-all ${
                       isPopular
                         ? `${accentBg} text-white hover:opacity-90`
@@ -210,7 +208,7 @@ export default function ServicesPage() {
                     }`}
                   >
                     Tanya Harga
-                  </a>
+                  </WhatsAppLink>
                 </div>
               );
             })}
@@ -254,15 +252,13 @@ export default function ServicesPage() {
           <p className="text-ink/70 mb-8">
             Chat kami aja dulu. Kami akan bantu pilih paket dan menu yang paling cocok buat perusahaan Anda.
           </p>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            cta="services_cta"
             className="inline-flex items-center gap-3 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-2xl font-bold text-base transition-all hover:shadow-2xl hover:shadow-green/30 hover:-translate-y-1"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Chat WhatsApp Sekarang
-          </a>
+          </WhatsAppLink>
         </div>
       </section>
     </main>

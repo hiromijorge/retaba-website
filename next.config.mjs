@@ -2,13 +2,14 @@
 
 // Script/style need 'unsafe-inline' because the pages are fully static (no per-request nonce)
 // and Next.js hydration + Framer Motion rely on inline scripts/styles.
+// Google Analytics 4 and Microsoft Clarity hosts follow each vendor's CSP guidance.
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://*.googletagmanager.com https://*.clarity.ms",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://res.cloudinary.com https://images.unsplash.com",
+  "img-src 'self' data: blob: https://res.cloudinary.com https://images.unsplash.com https://*.google-analytics.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com",
   "font-src 'self' data:",
-  "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com",
+  "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self' https://wa.me https://api.whatsapp.com",

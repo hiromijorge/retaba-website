@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { WA_LINK, PHONE_DISPLAY, PHONE_TEL, EMAIL, SERVICE_AREAS_TEXT } from '@/lib/site';
+import { waLink, PAGE_LABELS, PHONE_DISPLAY, PHONE_TEL, EMAIL, SERVICE_AREAS_TEXT } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 export const metadata: Metadata = {
   title: 'Kontak',
@@ -17,7 +18,7 @@ const contactMethods = [
     ),
     label: 'WhatsApp',
     value: PHONE_DISPLAY,
-    href: WA_LINK,
+    href: waLink(PAGE_LABELS['/contact']),
     desc: 'Balasan paling cepat',
     color: 'teal' as const,
     cta: 'Chat Sekarang',
@@ -125,6 +126,7 @@ export default function ContactPage() {
                     href={method.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-cta={`contact_${method.label.toLowerCase()}`}
                     className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all ${ctaClass}`}
                   >
                     {method.cta}
@@ -201,15 +203,13 @@ export default function ContactPage() {
           <p className="text-ink/70 mb-8">
             Jangan ragu buat chat kami. Tim RETABA siap jawab dan bantu cari solusi catering yang paling cocok.
           </p>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            cta="contact_bottom_cta"
             className="inline-flex items-center gap-3 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-2xl font-bold text-base transition-all hover:shadow-2xl hover:shadow-green/30 hover:-translate-y-1"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Chat WhatsApp Sekarang
-          </a>
+          </WhatsAppLink>
         </div>
       </section>
     </main>

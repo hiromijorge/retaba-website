@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import MenuGrid from '@/components/MenuGrid';
 import { menuItems } from '@/data/menu';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { WA_LINK, SITE_URL } from '@/lib/site';
+import { SITE_URL } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 
 const menuJsonLd = {
@@ -204,15 +205,13 @@ export default function MenuPage() {
           <p className="text-ink/70 mb-8 max-w-xl mx-auto">
             Kami punya 100+ menu yang bergilir tiap minggu. Chat kami untuk dapetin jadwal lengkap dan penawaran harga sesuai jumlah porsi.
           </p>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            cta="menu_cta"
             className="inline-flex items-center gap-3 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-2xl font-bold text-base transition-all hover:shadow-2xl hover:shadow-green/30 hover:-translate-y-1"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Minta Jadwal Menu via WhatsApp
-          </a>
+          </WhatsAppLink>
         </div>
       </section>
     </main>

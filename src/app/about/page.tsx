@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
-import { WA_LINK, COMPANY } from '@/lib/site';
+import { COMPANY } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 export const metadata: Metadata = {
   title: 'Tentang Kami',
@@ -168,14 +169,12 @@ export default function AboutPage() {
           <p className="text-ink/60 mb-8">
             Mari ngobrol dulu. Kami akan dengarkan kebutuhan perusahaan Anda dan kasih penawaran yang cocok.
           </p>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            cta="about_cta"
             className="inline-flex items-center gap-2 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-green/30"
           >
             Chat WhatsApp Sekarang
-          </a>
+          </WhatsAppLink>
         </div>
       </section>
     </main>

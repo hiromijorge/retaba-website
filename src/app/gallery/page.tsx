@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { WA_LINK } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 export const metadata: Metadata = {
   title: 'Galeri',
@@ -232,15 +232,13 @@ export default function GalleryPage() {
           <p className="text-ink/70 mb-8 max-w-xl mx-auto">
             Hubungi kami untuk mendapatkan jadwal menu lengkap, foto dokumentasi asli, dan penawaran harga sesuai kebutuhan perusahaan Anda.
           </p>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            cta="gallery_cta"
             className="inline-flex items-center gap-3 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-2xl font-bold text-base transition-all hover:shadow-2xl hover:shadow-green/30 hover:-translate-y-1"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Minta Penawaran via WhatsApp
-          </a>
+          </WhatsAppLink>
         </div>
       </section>
     </main>

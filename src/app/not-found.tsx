@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { WA_LINK } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 export const metadata: Metadata = {
   title: 'Halaman Tidak Ditemukan',
@@ -26,15 +26,13 @@ export default function NotFound() {
           >
             Ke Beranda
           </Link>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            cta="not_found"
             className="inline-flex items-center justify-center gap-2 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-full font-bold transition-all"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Chat WhatsApp
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </main>

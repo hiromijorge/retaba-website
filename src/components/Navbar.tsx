@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { WA_LINK } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 const navLinks = [
   { href: '/', label: 'Beranda' },
@@ -77,15 +77,13 @@ export default function Navbar() {
 
         {/* CTA + Mobile toggle */}
         <div className="flex items-center gap-3">
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            cta="navbar"
             className="hidden sm:flex items-center gap-2 bg-green hover:bg-green/90 text-white px-4 py-2 rounded-full text-sm font-bold transition-all hover:shadow-lg hover:shadow-green/20 hover:-translate-y-0.5"
           >
             <WhatsAppIcon className="w-4 h-4" />
             WhatsApp
-          </a>
+          </WhatsAppLink>
           <button
             type="button"
             onClick={() => setMobileOpen((open) => !open)}
@@ -131,15 +129,13 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                cta="navbar_mobile"
                 className="mt-2 flex items-center justify-center gap-2 bg-green text-white px-4 py-3 rounded-xl text-sm font-bold"
               >
                 <WhatsAppIcon className="w-4 h-4" />
                 Hubungi via WhatsApp
-              </a>
+              </WhatsAppLink>
             </div>
           </motion.div>
         )}

@@ -9,7 +9,8 @@ import ClientLogos from '@/components/ClientLogos';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { WA_LINK, SITE_URL, PHONE_E164, EMAIL, COMPANY, SERVICE_AREAS, SERVICE_AREAS_TEXT } from '@/lib/site';
+import { SITE_URL, PHONE_E164, EMAIL, COMPANY, SERVICE_AREAS, SERVICE_AREAS_TEXT } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 
 const jsonLd = {
@@ -193,19 +194,17 @@ export default function HomePage() {
             Kirim pesan sekarang. Kami akan balas dalam 1×24 jam dengan penawaran yang pas buat jumlah karyawan dan lokasi perusahaan Anda.
           </p>
 
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            cta="home_final_cta"
             className="inline-flex items-center justify-center gap-3 bg-green hover:bg-green/90 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all hover:shadow-2xl hover:shadow-green/30 hover:-translate-y-1"
           >
             <WhatsAppIcon className="w-6 h-6" />
             Minta Penawaran via WhatsApp
-          </a>
+          </WhatsAppLink>
 
           <p className="mt-4 text-ink/60 text-base">
             Atau kirim email ke{' '}
-            <a href={`mailto:${EMAIL}`} className="text-green hover:underline font-semibold">
+            <a href={`mailto:${EMAIL}`} data-cta="home_final_cta" className="text-green hover:underline font-semibold">
               {EMAIL}
             </a>
           </p>

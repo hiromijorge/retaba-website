@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import MotionProvider from '@/components/MotionProvider';
+import SiteAnalytics from '@/components/SiteAnalytics';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SITE_URL, SERVICE_AREAS_TEXT } from '@/lib/site';
@@ -97,6 +98,7 @@ export default function RootLayout({
         </MotionProvider>
         <Analytics />
         <SpeedInsights />
+        <SiteAnalytics />
       </body>
     </html>
   );

@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { WA_LINK, PHONE_DISPLAY, PHONE_TEL, EMAIL, COMPANY } from '@/lib/site';
+import { PHONE_DISPLAY, PHONE_TEL, EMAIL, COMPANY } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 const navLinks = [
   { href: '/', label: 'Beranda' },
@@ -16,7 +17,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-white relative overflow-hidden">
+    <footer data-cta="footer" className="bg-[#0f172a] text-white relative overflow-hidden">
       {/* Decorative top bar */}
       <div className="h-1.5 bg-gradient-to-r from-brand via-teal to-green" />
       
@@ -138,15 +139,13 @@ export default function Footer() {
             </ul>
 
             {/* CTA Button */}
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              cta="footer"
               className="inline-flex items-center gap-2 mt-8 bg-brand hover:bg-brand/90 text-ink px-6 py-3 rounded-xl font-bold text-sm transition-all hover:shadow-lg hover:shadow-brand/20"
             >
               <WhatsAppIcon className="w-5 h-5" />
               Chat WhatsApp
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       </div>

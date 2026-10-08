@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { clients, testimonials } from '@/data/clients';
-import { WA_LINK } from '@/lib/site';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 export const metadata: Metadata = {
   title: 'Klien Kami',
@@ -135,14 +135,12 @@ export default function ClientsPage() {
           <p className="text-ink/70 mb-8">
             Bergabunglah bersama perusahaan-perusahaan yang sudah mempercayakan makan siang karyawannya kepada kami.
           </p>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            cta="clients_cta"
             className="inline-flex items-center gap-2 bg-green hover:bg-green/90 text-white px-8 py-4 rounded-2xl font-bold text-base transition-all hover:shadow-2xl hover:shadow-green/30 hover:-translate-y-1"
           >
             Chat WhatsApp untuk Penawaran
-          </a>
+          </WhatsAppLink>
         </div>
       </section>
     </main>
